@@ -1,3 +1,7 @@
 export const App = () => {
-	return <p>init</p>
+	return (
+		<>
+			<h1>Olga Alagirova Brand & Communication Designer</h1>
+		</>
+	)
 }
