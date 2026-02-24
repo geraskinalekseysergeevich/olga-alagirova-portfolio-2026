@@ -3,7 +3,7 @@ h1 {
 	font-weight: 500;
 	font-size: 75px;
 	line-height: 120%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 h2 {
@@ -11,7 +11,7 @@ h2 {
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 120%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 h4 {
@@ -19,7 +19,7 @@ h4 {
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 160%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 h6 {
@@ -27,7 +27,7 @@ h6 {
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 100%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 .body {
@@ -35,7 +35,7 @@ h6 {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 150%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 .bodyAccent {
@@ -43,7 +43,7 @@ h6 {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 150%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 .caption {
@@ -51,7 +51,7 @@ h6 {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 140%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 }
 
 :root {

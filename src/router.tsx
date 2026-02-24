@@ -1,17 +1,18 @@
-import { createBrowserRouter } from "react-router-dom"
-import { CvPage } from "./pages/cv/cv"
-import { MainPage } from "./pages/main/main"
+import { createBrowserRouter } from 'react-router-dom'
 
-const MAIN_ROUTE = "/"
-const CV_ROUTE = "/cv"
+import { CvPage } from './pages/cv/cv'
+import { MainPage } from './pages/main/main'
+
+export const CV_ROUTE = '/cv'
+const MAIN_ROUTE = '/'
 
 export const router = createBrowserRouter([
 	{
 		path: MAIN_ROUTE,
-		element: <MainPage />
+		element: <MainPage />,
 	},
 	{
 		path: CV_ROUTE,
-		element: <CvPage />
-	}
+		element: <CvPage />,
+	},
 ])
