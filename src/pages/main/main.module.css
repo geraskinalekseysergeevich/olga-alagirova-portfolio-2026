@@ -18,7 +18,6 @@
 }
 
 .container section[id] {
-	min-height: 72vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;

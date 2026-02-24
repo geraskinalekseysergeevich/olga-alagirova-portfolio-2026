@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import { AboutCards } from '../../components/about-cards/about-cards'
+import { BrandCases } from '../../components/brand-cases/brand-cases'
 import { Navbar } from '../../components/navbar/navbar'
 import { Title } from '../../components/title/title'
 import styles from './main.module.css'
@@ -36,7 +37,7 @@ export const MainPage = () => {
 				<AboutCards />
 			</section>
 			<section id="brand-cases">
-				<Title texts={['Brand Cases']} />
+				<BrandCases />
 			</section>
 			<section id="typography-others">
 				<Title texts={['Typography & Others']} />
