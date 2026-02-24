@@ -1,0 +1,19 @@
+.card {
+	width: 100%;
+	padding: 50px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+	background-color: var(--color-cards-white);
+	color: var(--color-cards-black);
+}
+
+.card:nth-child(3n + 2) {
+	background-color: var(--color-cards-gray);
+}
+
+.card:nth-child(3n) {
+	background-color: var(--color-cards-black);
+	color: var(--color-cards-white);
+}

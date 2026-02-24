@@ -59,4 +59,8 @@ h6 {
 	--color-gray: #e3e3e3;
 	--color-light-gray: #efefef;
 	--color-white: #ffffff;
+
+	--color-cards-white: #ffffff;
+	--color-cards-gray: #e2e2e2;
+	--color-cards-black: #232323;
 }
