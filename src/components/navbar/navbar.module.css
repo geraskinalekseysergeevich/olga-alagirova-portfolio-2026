@@ -13,6 +13,8 @@
 	border-radius: 15px;
 	font-family: 'Inter', sans-serif;
 	background-color: #ffffff4d;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .left {
