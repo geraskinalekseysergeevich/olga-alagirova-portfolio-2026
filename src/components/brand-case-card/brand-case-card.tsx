@@ -2,13 +2,13 @@ import clsx from 'clsx'
 
 import type { BrandCase } from '../brand-cases/data'
 import { ViewButton } from '../view-button/view-button'
-import styles from './case-card.module.css'
+import styles from './brand-case-card.module.css'
 
-type CaseCardProps = {
+type BrandCaseCardProps = {
 	brandCase: BrandCase
 }
 
-export const CaseCard = ({ brandCase }: CaseCardProps) => {
+export const BrandCaseCard = ({ brandCase }: BrandCaseCardProps) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.image}></div>
