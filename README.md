@@ -1,3 +1,1 @@
-# Plan
-
-- English / Russian языки
+# Olga Agirova Portfolio 2026
