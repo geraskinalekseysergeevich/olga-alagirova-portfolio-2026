@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 import type { BrandCase } from '../brand-cases/data'
-import { ViewButton } from '../view-button/view-button'
+import { CustomButton } from '../custom-button/custom-button'
 import styles from './brand-case-card.module.css'
 
 type BrandCaseCardProps = {
@@ -18,7 +18,7 @@ export const BrandCaseCard = ({ brandCase }: BrandCaseCardProps) => {
 					<h2>{brandCase.title}</h2>
 					<p className={clsx('body', styles.caseParagraph)}>{brandCase.paragraph}</p>
 				</div>
-				<ViewButton to={brandCase.link} />
+				<CustomButton to={brandCase.link} text="View" />
 			</div>
 		</div>
 	)

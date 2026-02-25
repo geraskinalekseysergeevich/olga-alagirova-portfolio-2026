@@ -57,5 +57,7 @@ body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
-	padding: 30px 80px;
+	padding: 30px 80px 150px 80px;
+	max-width: 1440px;
+	margin: 0 auto;
 }

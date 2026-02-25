@@ -8,4 +8,5 @@
 
 .text {
 	color: var(--color-white);
+	line-height: 90%;
 }

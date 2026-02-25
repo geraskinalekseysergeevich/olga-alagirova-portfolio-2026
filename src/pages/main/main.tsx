@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import { AboutCards } from '../../components/about-cards/about-cards'
 import { BrandCases } from '../../components/brand-cases/brand-cases'
+import { Contacts } from '../../components/contacts/contacts'
 import { Navbar } from '../../components/navbar/navbar'
 import { OtherCases } from '../../components/other-cases/other-cases'
 import { Title } from '../../components/title/title'
@@ -44,7 +45,7 @@ export const MainPage = () => {
 				<OtherCases />
 			</section>
 			<section id="contacts">
-				<Title texts={['Contacts']} />
+				<Contacts />
 			</section>
 		</div>
 	)
