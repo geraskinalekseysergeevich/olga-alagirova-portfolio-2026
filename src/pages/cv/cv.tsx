@@ -1,3 +1,4 @@
+import { AvatarComposition } from '../../components/avatar-composition/avatar-composition'
 import { Contacts } from '../../components/contacts/contacts'
 import { DropdownBlock } from '../../components/dropdown-block/dropdown-block'
 import { Navbar } from '../../components/navbar/navbar'
@@ -11,8 +12,8 @@ export const CvPage = () => {
 		<div className={styles.container}>
 			<Navbar />
 			<div>
-				<Title texts={['Olga Alagirova', 'Brand & Communication Designer']} />
-				<div>фото</div>
+				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} />
+				<AvatarComposition />
 			</div>
 			<div className={styles.content}>
 				<div className={styles.info}>
