@@ -12,7 +12,7 @@ export const CvPage = () => {
 		<div className={styles.container}>
 			<Navbar />
 			<div>
-				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} />
+				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} scrollDownText />
 				<AvatarComposition />
 			</div>
 			<div className={styles.content}>

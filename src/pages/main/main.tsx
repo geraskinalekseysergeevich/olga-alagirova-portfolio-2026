@@ -33,7 +33,7 @@ export const MainPage = () => {
 		<div className={styles.container}>
 			<Navbar />
 			<section>
-				<Title texts={['Olga Alagirova', 'Brand & Communication Designer']} />
+				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} scrollDownText />
 			</section>
 			<section>
 				<AboutCards />
