@@ -1,3 +1,4 @@
+import { BodyText } from '../../texts/texts'
 import styles from './about-card.module.css'
 
 type AboutCardProps = {
@@ -9,7 +10,7 @@ export const AboutCard = ({ text, caption }: AboutCardProps) => {
 	return (
 		<article className={styles.card}>
 			<h2>{text}</h2>
-			<p className="body">{caption}</p>
+			<BodyText text={caption} />
 		</article>
 	)
 }

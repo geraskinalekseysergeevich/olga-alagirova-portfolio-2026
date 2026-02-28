@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 
 import { CustomButton } from '../custom-button/custom-button'
+import { BodyText } from '../texts/texts'
 import { Title } from '../title/title'
 import { ContactColumn } from './contact-column/contact-column'
 import styles from './contacts.module.css'
@@ -13,11 +14,10 @@ export const Contacts = () => {
 				<div className={clsx(styles.column, styles.left)}>
 					<div className={styles.header}>
 						<h2>Olga Alagirova</h2>
-						<p className="body">
-							Brand & Communication Designer
-							<br />
-							Based in Moscow
-						</p>
+						<div>
+							<BodyText text="Brand & Communication Designer" />
+							<BodyText text="Based in Moscow" />
+						</div>
 					</div>
 					<div className={styles.grid}>
 						<ContactColumn name="Telegram" content="@alagirovva" />
