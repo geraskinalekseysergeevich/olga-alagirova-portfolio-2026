@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 import { Layout } from '../components/layout/layout'
 import { AplasticPage } from '../pages/cases/aplastic/aplastic'
@@ -22,10 +22,22 @@ export const router = createBrowserRouter([
 				path: CASES_ROUTE,
 				children: [
 					{
+						index: true,
+						element: <Navigate replace to={MAIN_ROUTE} />,
+					},
+					{
 						path: APLASTIC_ROUTE,
 						element: <AplasticPage />,
 					},
+					{
+						path: '*',
+						element: <Navigate replace to={MAIN_ROUTE} />,
+					},
 				],
+			},
+			{
+				path: '*',
+				element: <Navigate replace to={MAIN_ROUTE} />,
 			},
 		],
 	},
