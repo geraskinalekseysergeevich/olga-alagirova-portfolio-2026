@@ -4,7 +4,7 @@ import { CvPage } from './pages/cv/cv'
 import { MainPage } from './pages/main/main'
 
 export const CV_ROUTE = '/cv'
-const MAIN_ROUTE = '/'
+export const MAIN_ROUTE = '/'
 
 export const router = createBrowserRouter([
 	{

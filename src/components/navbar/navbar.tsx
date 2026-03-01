@@ -1,4 +1,6 @@
-import { CV_ROUTE } from '../../router'
+import { NavLink } from 'react-router-dom'
+
+import { CV_ROUTE, MAIN_ROUTE } from '../../router'
 import styles from './navbar.module.css'
 import { NavbarItem } from './navbar-item/navbar-item'
 
@@ -17,7 +19,9 @@ export const Navbar = () => {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.left}>
-				<h6>Olga Alagirova</h6>
+				<NavLink to={MAIN_ROUTE}>
+					<h6>Olga Alagirova</h6>
+				</NavLink>
 			</div>
 			<div className={styles.actions}>
 				{NAV_ITEMS.map((item, index: number) => (
