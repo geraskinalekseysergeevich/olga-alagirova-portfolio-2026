@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.role {
+	color: var(--color-black);
+	opacity: 0.5;
+}
+
+.cases {
+	display: flex;
+	flex-direction: column;
+	gap: 38px;
+	margin-top: 28px;
+}
+
+.rotated {
+	rotate: 180deg;
+}

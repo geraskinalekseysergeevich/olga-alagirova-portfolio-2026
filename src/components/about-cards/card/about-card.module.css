@@ -1,0 +1,29 @@
+.card {
+	position: relative;
+	transform-origin: center top;
+	will-change: transform;
+	width: 100%;
+	padding: 50px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+	background-color: var(--color-cards-white);
+	color: var(--color-cards-black);
+}
+
+.cardGray {
+	background-color: var(--color-cards-gray);
+}
+
+.cardBlack {
+	background-color: var(--color-cards-black);
+	color: var(--color-cards-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card {
+		transform: none !important;
+		will-change: auto;
+	}
+}

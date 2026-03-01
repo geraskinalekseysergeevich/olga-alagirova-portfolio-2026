@@ -1,0 +1,37 @@
+.container {
+	min-height: 100vh;
+	padding-top: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 150px;
+}
+
+.content {
+	max-width: 620px;
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+}
+
+.info,
+.workExperience,
+.mainProjects,
+.education {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.skills {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.contactsSection {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	scroll-margin-top: 140px;
+}

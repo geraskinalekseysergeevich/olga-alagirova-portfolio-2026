@@ -1,0 +1,25 @@
+.container {
+	min-height: 100vh;
+	padding-top: 240px;
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+}
+
+.hero {
+	min-height: 58vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.aboutSection {
+	width: 100%;
+}
+
+.container section[id] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	scroll-margin-top: 140px;
+}

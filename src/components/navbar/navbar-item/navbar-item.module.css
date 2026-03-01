@@ -1,0 +1,85 @@
+.button {
+	padding: 15px 20px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	white-space: nowrap;
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		box-shadow 0.2s ease,
+		color 0.2s ease;
+}
+
+.buttonLight {
+	--button-bg: color-mix(in srgb, #bbbbbc 10%, transparent);
+	--button-color: #13151a;
+	--button-bg-hover: color-mix(in srgb, #bbbbbc 44%, transparent);
+	--button-shadow-hover:
+		inset 0 0 0 0.5px color-mix(in srgb, #ffffff 14%, transparent),
+		inset 2px 1px 0 -1px color-mix(in srgb, #ffffff 90%, transparent),
+		inset -1.5px -1px 0 -1px color-mix(in srgb, #ffffff 80%, transparent),
+		inset -2px -6px 1px -5px color-mix(in srgb, #ffffff 60%, transparent),
+		inset -1px 2px 3px -1px color-mix(in srgb, #000000 20%, transparent),
+		inset 0 -4px 1px -2px color-mix(in srgb, #000000 10%, transparent),
+		0 3px 6px 0 color-mix(in srgb, #000000 8%, transparent);
+	background: var(--button-bg);
+	color: var(--button-color);
+	box-shadow:
+		inset 0 0 0 0.5px color-mix(in srgb, #ffffff 10%, transparent),
+		inset 2px 1px 0 -1px color-mix(in srgb, #ffffff 86%, transparent),
+		inset -1.5px -1px 0 -1px color-mix(in srgb, #ffffff 72%, transparent),
+		inset -2px -6px 1px -5px color-mix(in srgb, #ffffff 54%, transparent),
+		inset -1px 2px 3px -1px color-mix(in srgb, #000000 18%, transparent),
+		inset 0 -4px 1px -2px color-mix(in srgb, #000000 9%, transparent),
+		0 3px 6px 0 color-mix(in srgb, #000000 6%, transparent);
+	backdrop-filter: blur(8px) url(#navbar-liquid-soft) saturate(125%);
+	-webkit-backdrop-filter: blur(8px) saturate(125%);
+}
+
+.buttonLight::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 54%, transparent 100%);
+	z-index: 0;
+}
+
+.buttonLight:hover {
+	background: var(--button-bg-hover);
+	transform: translateY(-1px);
+	box-shadow: var(--button-shadow-hover);
+}
+
+.buttonDark {
+	--button-bg: var(--color-black);
+	--button-color: var(--color-white);
+	--button-bg-hover: var(--color-black);
+	--button-shadow-hover: -3px 3px 10px 0px #00000040;
+	background: var(--button-bg);
+	color: var(--button-color);
+	border: 0.5px solid transparent;
+}
+
+.buttonDark:hover {
+	background: var(--button-bg-hover);
+	transform: translateY(-1px);
+	box-shadow: var(--button-shadow-hover);
+}
+
+.button:hover {
+	color: var(--button-color);
+}
+
+.button:active {
+	transform: translateY(0);
+}
+
+.text {
+	position: relative;
+	z-index: 1;
+	line-height: 90%;
+}

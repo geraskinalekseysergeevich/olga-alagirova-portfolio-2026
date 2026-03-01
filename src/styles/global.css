@@ -1,0 +1,62 @@
+@import url('./variables');
+@import url('./fonts');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	background-color: var(--color-light-gray);
+}
+
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
+	padding: 30px 80px 150px 80px;
+	max-width: 1440px;
+	margin: 0 auto;
+}

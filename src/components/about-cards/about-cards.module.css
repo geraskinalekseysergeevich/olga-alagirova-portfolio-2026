@@ -1,0 +1,13 @@
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	overflow: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.container {
+		padding-bottom: 0;
+	}
+}

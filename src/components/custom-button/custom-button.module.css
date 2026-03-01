@@ -1,0 +1,12 @@
+.button {
+	padding: 20px 30px;
+	background-color: var(--color-black);
+	box-shadow: -3px 3px 10px 0px #00000040;
+	border-radius: 10px;
+	width: fit-content;
+}
+
+.text {
+	color: var(--color-white);
+	line-height: 90%;
+}

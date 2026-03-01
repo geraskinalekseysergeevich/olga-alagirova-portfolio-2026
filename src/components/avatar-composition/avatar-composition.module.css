@@ -1,0 +1,28 @@
+.container {
+	position: relative;
+	width: 340px;
+	height: 360px;
+	margin-top: -40px;
+	margin-left: 5px;
+}
+
+.clip {
+	position: absolute;
+	top: 0;
+	left: 122px;
+	width: 108px;
+	height: 102px;
+	z-index: 2;
+}
+
+.avatar {
+	position: absolute;
+	top: 42px;
+	left: 10px;
+	width: 320px;
+	height: 320px;
+	object-fit: cover;
+	border-radius: 10px;
+	transform: rotate(-5deg);
+	z-index: 1;
+}
