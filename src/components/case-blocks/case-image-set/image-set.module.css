@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	max-width: 620px;
-	margin: 0 auto;
+}
+
+.image {
+	border-radius: 15px;
 }
