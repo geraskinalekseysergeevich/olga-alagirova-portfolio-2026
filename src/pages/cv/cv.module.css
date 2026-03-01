@@ -28,3 +28,10 @@
 	flex-direction: column;
 	gap: 50px;
 }
+
+.contactsSection {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	scroll-margin-top: 140px;
+}

@@ -1,16 +1,17 @@
 import { AvatarComposition } from '../../components/avatar-composition/avatar-composition'
 import { Contacts } from '../../components/contacts/contacts'
 import { DropdownBlock } from '../../components/dropdown-block/dropdown-block'
-import { Navbar } from '../../components/navbar/navbar'
 import { BodyAccentText, BodyText } from '../../components/texts/texts'
 import { Title } from '../../components/title/title'
+import { useHashScroll } from '../../hooks/use-hash-scroll'
 import styles from './cv.module.css'
 import { EDUCATION_CASES, MAIN_PROJECT_CASES, WORK_EXPERIENCE_CASES } from './data'
 
 export const CvPage = () => {
+	useHashScroll()
+
 	return (
 		<div className={styles.container}>
-			<Navbar />
 			<div>
 				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} scrollDownText />
 				<AvatarComposition />
@@ -58,7 +59,9 @@ export const CvPage = () => {
 					<BodyText text="И главное — хорошее чувство юмора!" />
 				</div>
 			</div>
-			<Contacts />
+			<section className={styles.contactsSection} id="contacts">
+				<Contacts />
+			</section>
 		</div>
 	)
 }
