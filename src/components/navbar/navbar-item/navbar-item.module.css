@@ -1,18 +1,12 @@
 .button {
-	--button-bg: rgba(255, 255, 255, 0.2);
-	--button-border: rgba(255, 255, 255, 0.34);
+	--button-bg: rgba(255, 255, 255, 0.1);
 	--button-color: #13151a;
 	--button-bg-hover: rgba(255, 255, 255, 0.32);
 	--button-shadow-hover: 0 8px 16px rgba(35, 35, 35, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.74);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
 	padding: 15px 20px;
 	border-radius: 10px;
 	background: var(--button-bg);
 	backdrop-filter: blur(15px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: var(--button-color);
 	white-space: nowrap;
 	text-decoration: none;
@@ -34,10 +28,9 @@
 }
 
 .buttonDark {
-	--button-bg: #232323;
-	--button-border: transparent;
-	--button-color: #ffffff;
-	--button-bg-hover: #232323;
+	--button-bg: var(--color-black);
+	--button-color: var(--color-white);
+	--button-bg-hover: var(--color-black);
 	--button-shadow-hover: -3px 3px 10px 0px #00000040;
 }
 
