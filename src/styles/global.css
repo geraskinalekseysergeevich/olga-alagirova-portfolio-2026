@@ -49,7 +49,6 @@ table {
 }
 
 html {
-	scroll-behavior: smooth;
 	background-color: var(--color-light-gray);
 }
 
