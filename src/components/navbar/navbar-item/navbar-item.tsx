@@ -11,7 +11,7 @@ type NavbarItemProps = {
 
 export const NavbarItem = ({ text, to, theme = 'light' }: NavbarItemProps) => {
 	return (
-		<NavLink className={clsx(styles.button, theme === 'dark' && styles.buttonDark)} to={to}>
+		<NavLink className={clsx(styles.button, theme === 'light' ? styles.buttonLight : styles.buttonDark)} to={to}>
 			<p className={`caption ${styles.text}`}>{text}</p>
 		</NavLink>
 	)

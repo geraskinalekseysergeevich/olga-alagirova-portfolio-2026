@@ -125,6 +125,24 @@ export const Navbar = () => {
 
 	return (
 		<div className={styles.shell}>
+			<div aria-hidden className={styles.liquidDefs}>
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<filter id="navbar-liquid" primitiveUnits="objectBoundingBox">
+							<feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="1" seed="9" result="map" />
+							<feGaussianBlur in="map" stdDeviation="0.1" result="mapSoft" />
+							<feGaussianBlur in="SourceGraphic" stdDeviation="0.01" result="blur" />
+							<feDisplacementMap in="blur" in2="mapSoft" scale="0.08" xChannelSelector="R" yChannelSelector="G" />
+						</filter>
+						<filter id="navbar-liquid-soft" primitiveUnits="objectBoundingBox">
+							<feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="1" seed="9" result="map" />
+							<feGaussianBlur in="map" stdDeviation="0.1" result="mapSoft" />
+							<feGaussianBlur in="SourceGraphic" stdDeviation="0.005" result="blur" />
+							<feDisplacementMap in="blur" in2="mapSoft" scale="0.04" xChannelSelector="R" yChannelSelector="G" />
+						</filter>
+					</defs>
+				</svg>
+			</div>
 			<nav className={styles.nav} ref={navRef} style={navStyle}>
 				<div className={styles.content} ref={contentRef}>
 					<div className={styles.logo}>
