@@ -5,7 +5,7 @@
 }
 
 .image {
-	background-color: green;
+	background-color: var(--color-black);
 	border-top-left-radius: var(--other-border-radius);
 	border-top-right-radius: var(--other-border-radius);
 }

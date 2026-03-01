@@ -6,7 +6,7 @@
 }
 
 .image {
-	background-color: green;
+	background-color: var(--color-black);
 	border-bottom-left-radius: var(--brand-border-radius);
 	border-top-left-radius: var(--brand-border-radius);
 }
