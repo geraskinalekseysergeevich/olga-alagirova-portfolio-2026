@@ -4,9 +4,12 @@ import { CasePageHeader } from '../../../components/case-blocks/case-page-header
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CaseVideo } from '../../../components/case-blocks/case-video/video'
 import { Contacts } from '../../../components/contacts/contacts'
+import { useHashScroll } from '../../../hooks/use-hash-scroll'
 import styles from './aplastic.module.css'
 
 export const AplasticPage = () => {
+	useHashScroll()
+
 	return (
 		<div className={styles.container}>
 			<CasePageHeader texts={['Брендинг экопроекта', 'в Абхазии']} imgSrc="/cases/aplastic/header.jpg" />
@@ -69,7 +72,9 @@ export const AplasticPage = () => {
 				year="2025"
 			/>
 			<div>Кнопки для переключения между проектами</div>
-			<Contacts />
+			<section id="contacts">
+				<Contacts />
+			</section>
 		</div>
 	)
 }
