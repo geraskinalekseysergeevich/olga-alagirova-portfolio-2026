@@ -1,4 +1,7 @@
 .card {
+	position: relative;
+	transform-origin: center top;
+	will-change: transform;
 	width: 100%;
 	padding: 50px;
 	border-radius: 20px;
@@ -9,11 +12,18 @@
 	color: var(--color-cards-black);
 }
 
-.card:nth-child(3n + 2) {
+.cardGray {
 	background-color: var(--color-cards-gray);
 }
 
-.card:nth-child(3n) {
+.cardBlack {
 	background-color: var(--color-cards-black);
 	color: var(--color-cards-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card {
+		transform: none !important;
+		will-change: auto;
+	}
 }

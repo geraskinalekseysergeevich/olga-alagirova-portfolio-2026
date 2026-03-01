@@ -11,7 +11,7 @@ export const MainPage = () => {
 
 	return (
 		<div className={styles.container}>
-			<section>
+			<section style={{ marginBottom: '150px' }}>
 				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} scrollDownText />
 			</section>
 			<section>

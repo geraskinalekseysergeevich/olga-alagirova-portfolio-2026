@@ -2,23 +2,12 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	gap: 0;
+	overflow: visible;
 }
 
-.container > * {
-	transition: margin-top 0.35s ease;
-}
-
-.container > * + * {
-	margin-top: -100px;
-}
-
-.container > *:hover + *,
-.container > *:focus-within + * {
-	margin-top: 0;
-}
-
-@media (hover: none) {
-	.container > * + * {
-		margin-top: 0;
+@media (prefers-reduced-motion: reduce) {
+	.container {
+		padding-bottom: 0;
 	}
 }
