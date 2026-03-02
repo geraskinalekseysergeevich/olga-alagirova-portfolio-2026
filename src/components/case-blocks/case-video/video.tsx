@@ -1,5 +1,9 @@
 import styles from './video.module.css'
 
-export const CaseVideo = () => {
-	return <div className={styles.container}></div>
+type CaseVideoProps = {
+	src?: string
+}
+
+export const CaseVideo = ({ src }: CaseVideoProps) => {
+	return <video autoPlay className={styles.video} loop muted playsInline preload="metadata" src={src} />
 }
