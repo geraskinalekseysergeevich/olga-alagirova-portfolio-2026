@@ -1,0 +1,7 @@
+.container {
+	max-width: 620px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	gap: 20px;
+}

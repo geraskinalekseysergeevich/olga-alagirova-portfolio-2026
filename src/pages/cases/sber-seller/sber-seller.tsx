@@ -4,6 +4,7 @@ import { CaseImageSet } from '../../../components/case-blocks/case-image-set/ima
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
+import { APLASTIC_ROUTE, CASES_ROUTE } from '../../../router/routes'
 import { SBER_SELLER_ANCHORS, SberAnchorId } from './anchors'
 
 export const SberSellerPage = () => {
@@ -59,7 +60,7 @@ export const SberSellerPage = () => {
           Motion — Андрей Морев"
 				year="2024"
 			/>
-			<CaseListButtons />
+			<CaseListButtons previous={`${CASES_ROUTE}/${APLASTIC_ROUTE}`} next="" />
 		</CasePageTemplate>
 	)
 }
