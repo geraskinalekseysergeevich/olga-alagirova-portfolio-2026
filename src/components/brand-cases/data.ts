@@ -1,4 +1,4 @@
-import { APLASTIC_ROUTE, CASES_ROUTE, SBER_SELLER_ROUTE } from '../../router/routes'
+import { APLASTIC_ROUTE, CASES_ROUTE, GKB_DAVYDOVSKY_ROUTE, SBER_SELLER_ROUTE } from '../../router/routes'
 
 export type BrandCase = {
 	imagePath: string
@@ -31,6 +31,6 @@ export const BRAND_CASES: BrandCase[] = [
 		title: 'Фирменный стиль и сайт больницы',
 		paragraph:
 			'Разработала айдентику и сайт государственной больницы в роли арт-директора. Курировала внедрение фирменного стиля во всех носителях — от печатных материалов до социальных сетей и многостраничного сайта. Проект реализован и работает.',
-		link: '',
+		link: `${CASES_ROUTE}/${GKB_DAVYDOVSKY_ROUTE}`,
 	},
 ]
