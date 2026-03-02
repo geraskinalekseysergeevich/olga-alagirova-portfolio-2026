@@ -1,10 +1,11 @@
+import { CaseListButtons } from '../../../components/case-blocks/case-buttons/list-buttons'
 import { CaseFooter } from '../../../components/case-blocks/case-footer/footer'
 import { CaseImageSet } from '../../../components/case-blocks/case-image-set/image-set'
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CaseVideo } from '../../../components/case-blocks/case-video/video'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { AnchorId, APLASTIC_ANCHORS } from './anchors'
+import { APLASTIC_ANCHORS, AplasticAnchorId } from './anchors'
 
 export const AplasticPage = () => {
 	return (
@@ -13,7 +14,7 @@ export const AplasticPage = () => {
 			header={<CasePageHeader texts={['Брендинг экопроекта', 'в Абхазии']} imgSrc="/cases/aplastic/header.jpg" />}
 		>
 			<CaseTextBlock
-				anchorId={AnchorId.TASK_SOLUTION}
+				anchorId={AplasticAnchorId.TASK_SOLUTION}
 				title="Задача"
 				paragraph="Команда из Абхазии выиграла государственный грант на запуск производства по переработке пластиковых отходов. Проект социальный: необходимо изменить поведение людей — научить сортировать пластик и сдавать его на переработку. У команды не было бренда, позиционирования и визуального языка. Нужно было создать понятную, современную систему с акцентом на локальную культуру."
 			/>
@@ -23,13 +24,13 @@ export const AplasticPage = () => {
 			/>
 			<CaseVideo />
 			<CaseTextBlock
-				anchorId={AnchorId.VISUAL_SYSTEM}
+				anchorId={AplasticAnchorId.VISUAL_SYSTEM}
 				title="Визуальная система"
 				paragraph="Пиксель — как частица переработанного пластика. Основа дизайн-системы — квадрат (модуль). Все форматы квадратные. Разработана модульная сетка. Жёлтый квадрат стал фирменным образом бренда. Типографика поддерживает абхазский язык и использует квадратные точки в знаках препинания."
 			/>
 			<CaseImageSet imagesSrc={['/cases/aplastic/1.jpg']} />
 			<CaseTextBlock
-				anchorId={AnchorId.OFFLINE_DIGITAL}
+				anchorId={AplasticAnchorId.OFFLINE_DIGITAL}
 				title="Стратегия"
 				paragraph="Фокус на вирусную оффлайн-коммуникацию. Я исследовала локальный рынок и поняла, что в маленькой Абхазии уличная реклама работает эффективнее, чем попытка конкурировать в соцсетях с российским рынком. Коммуникация на двух языках — абхазском и русском. Введение фирменной интонации: абхазские междометия «Уоу!», «Ора!», «Ааи!» в начале заголовков стали узнаваемым приемом бренда."
 			/>
@@ -50,7 +51,7 @@ export const AplasticPage = () => {
 			/>
 			<CaseImageSet imagesSrc={['/cases/aplastic/7.jpg', '/cases/aplastic/8.jpg']} />
 			<CaseTextBlock
-				anchorId={AnchorId.MERCH}
+				anchorId={AplasticAnchorId.MERCH}
 				title="Мерч"
 				paragraph="Мерч из переработанного пластика — буквы абхазского алфавита. Из них производятся брелоки, которые можно получить за сданный килограмм пластика. Это усиливает локальную идентичность и превращает сортировку в ощутимый обмен."
 			/>
@@ -63,7 +64,7 @@ export const AplasticPage = () => {
 				]}
 			/>
 			<CaseTextBlock
-				anchorId={AnchorId.RESULT}
+				anchorId={AplasticAnchorId.RESULT}
 				title="Результат"
 				paragraph="Проект реализован и работает. Благодаря вирусной офлайн-рекламе о проекте узнало более 150 человек, перешедших на сайт. Из них более 80 человек посетили выставку и открытый лекторий, посвященный переработке пластика с брендом «aplastic amҩa»."
 			/>
@@ -75,7 +76,7 @@ export const AplasticPage = () => {
           Разработчик сайта — Алексей Гераськин"
 				year="2025"
 			/>
-			<div>Кнопки для переключения между проектами</div>
+			<CaseListButtons />
 		</CasePageTemplate>
 	)
 }

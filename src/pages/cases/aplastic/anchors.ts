@@ -1,6 +1,6 @@
 import type { AnchorConfig } from '../../../components/case-blocks/case-navigation/types'
 
-export enum AnchorId {
+export enum AplasticAnchorId {
 	TASK_SOLUTION = 'task-solution',
 	VISUAL_SYSTEM = 'visual-system',
 	OFFLINE_DIGITAL = 'offline-digital',
@@ -9,9 +9,9 @@ export enum AnchorId {
 }
 
 export const APLASTIC_ANCHORS: AnchorConfig[] = [
-	{ id: AnchorId.TASK_SOLUTION, text: 'Задача и решение' },
-	{ id: AnchorId.VISUAL_SYSTEM, text: 'Визуальная система' },
-	{ id: AnchorId.OFFLINE_DIGITAL, text: 'Офлайн и диджитал' },
-	{ id: AnchorId.MERCH, text: 'Мерч' },
-	{ id: AnchorId.RESULT, text: 'Результат' },
+	{ id: AplasticAnchorId.TASK_SOLUTION, text: 'Задача и решение' },
+	{ id: AplasticAnchorId.VISUAL_SYSTEM, text: 'Визуальная система' },
+	{ id: AplasticAnchorId.OFFLINE_DIGITAL, text: 'Офлайн и диджитал' },
+	{ id: AplasticAnchorId.MERCH, text: 'Мерч' },
+	{ id: AplasticAnchorId.RESULT, text: 'Результат' },
 ]
