@@ -5,6 +5,10 @@
 	gap: 100px;
 }
 
+.container section[id] {
+	scroll-margin-top: 140px;
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: 220fr 1060fr;
