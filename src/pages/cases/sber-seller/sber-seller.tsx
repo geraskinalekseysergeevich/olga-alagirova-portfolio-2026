@@ -30,6 +30,7 @@ export const SberSellerPage = () => {
 			/>
 			<CaseImageSet imagesSrc={['/cases/sber-seller/1.jpg', '/cases/sber-seller/2.jpg']} />
 			<CaseTextBlock
+				anchorId={SberAnchorId.IDEA}
 				title="Идея"
 				paragraph="Мы сформулировали позиционирование: «СберСеллер — всегда там, где точки внимания». Сервис помогает бизнесу находить и усиливать точки внимания целевой аудитории. Эта мысль стала основой визуальной системы."
 			/>
@@ -40,7 +41,10 @@ export const SberSellerPage = () => {
 				paragraph="Основная площадка коммуникации — презентации. Поэтому мы разработали три визуальные концепции и выбрали одну для масштабирования, построили дизайн-систему презентационных материалов, создали набор 3D-иконок в новом стиле, подготовили концепт motion-направления, внедрили ИИ-инструменты для генерации объёмных графических сцен в презентациях."
 			/>
 			<CaseImageSet imagesSrc={['/cases/sber-seller/6.jpg', '/cases/sber-seller/7.jpg', '/cases/sber-seller/8.jpg']} />
-			<CaseImageSet imagesSrc={['/cases/sber-seller/9.jpg', '/cases/sber-seller/10.jpg']} />
+			<CaseImageSet
+				anchorId={SberAnchorId.ICONS}
+				imagesSrc={['/cases/sber-seller/9.jpg', '/cases/sber-seller/10.jpg']}
+			/>
 			<CaseTextBlock
 				anchorId={SberAnchorId.MERCH}
 				title="Мерч как продолжение идеи"

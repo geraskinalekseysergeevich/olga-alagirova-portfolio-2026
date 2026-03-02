@@ -31,22 +31,25 @@ export const AplasticPage = () => {
 			/>
 			<CaseImageSet imagesSrc={['/cases/aplastic/1.jpg']} />
 			<CaseTextBlock
-				anchorId={AplasticAnchorId.OFFLINE_DIGITAL}
+				anchorId={AplasticAnchorId.STRATEGY}
 				title="Стратегия"
 				paragraph="Фокус на вирусную оффлайн-коммуникацию. Я исследовала локальный рынок и поняла, что в маленькой Абхазии уличная реклама работает эффективнее, чем попытка конкурировать в соцсетях с российским рынком. Коммуникация на двух языках — абхазском и русском. Введение фирменной интонации: абхазские междометия «Уоу!», «Ора!», «Ааи!» в начале заголовков стали узнаваемым приемом бренда."
 			/>
 			<CaseImageSet imagesSrc={['/cases/aplastic/2.jpg', '/cases/aplastic/3.jpg']} />
 			<CaseTextBlock
+				anchorId={AplasticAnchorId.MECHANICS}
 				title="Вирусная механика"
 				paragraph="Формат интерактивных городских плакатов: половина — типографическая, половина — фото объекта в природной среде Абхазии. Сам объект закрыт желтой пиксельной маской. QR-код ведет на сайт, где можно «распикселить» объект. Так офлайн трафик переводится в digital. Плакаты модульные и комбинируются между собой."
 			/>
 			<CaseVideo />
 			<CaseTextBlock
+				anchorId={AplasticAnchorId.WEBSITE}
 				title="Сайт"
 				paragraph="Сайт построен на той же модульной системе. Интерфейс собирается из квадратов. Я спроектировала структуру, разработала визуальный язык и курировала разработчиков на этапе реализации."
 			/>
 			<CaseImageSet imagesSrc={['/cases/aplastic/4.jpg', '/cases/aplastic/5.jpg', '/cases/aplastic/6.jpg']} />
 			<CaseTextBlock
+				anchorId={AplasticAnchorId.PHOTOSTYLE}
 				title="Фото-стиль"
 				paragraph="Объекты из переработанного пластика в природной среде Абхазии: зелень, море, песок. Искусственный материал возвращается в живой ландшафт."
 			/>
@@ -65,7 +68,7 @@ export const AplasticPage = () => {
 				]}
 			/>
 			<CaseTextBlock
-				anchorId={AplasticAnchorId.RESULT}
+				anchorId={AplasticAnchorId.RESULT_TEAM}
 				title="Результат"
 				paragraph="Проект реализован и работает. Благодаря вирусной офлайн-рекламе о проекте узнало более 150 человек, перешедших на сайт. Из них более 80 человек посетили выставку и открытый лекторий, посвященный переработке пластика с брендом «aplastic amҩa»."
 			/>

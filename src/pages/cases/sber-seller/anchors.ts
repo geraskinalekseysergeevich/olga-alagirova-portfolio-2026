@@ -2,6 +2,7 @@ import type { AnchorConfig } from '../../../components/case-blocks/case-navigati
 
 export enum SberAnchorId {
 	TASK_SOLUTION = 'task-solution',
+	IDEA = 'idea',
 	SYSTEM = 'system',
 	ICONS = 'icons',
 	MERCH = 'merch',
@@ -10,6 +11,7 @@ export enum SberAnchorId {
 
 export const SBER_SELLER_ANCHORS: AnchorConfig[] = [
 	{ id: SberAnchorId.TASK_SOLUTION, text: 'Задача и решение' },
+	{ id: SberAnchorId.IDEA, text: 'Идея' },
 	{ id: SberAnchorId.SYSTEM, text: 'Система и масштабирование' },
 	{ id: SberAnchorId.ICONS, text: '3D-иконки' },
 	{ id: SberAnchorId.MERCH, text: 'Мерч' },

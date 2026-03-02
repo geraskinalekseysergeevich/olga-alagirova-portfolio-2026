@@ -3,15 +3,21 @@ import type { AnchorConfig } from '../../../components/case-blocks/case-navigati
 export enum AplasticAnchorId {
 	TASK_SOLUTION = 'task-solution',
 	VISUAL_SYSTEM = 'visual-system',
-	OFFLINE_DIGITAL = 'offline-digital',
+	STRATEGY = 'strategy',
+	MECHANICS = 'mechanics',
+	WEBSITE = 'website',
+	PHOTOSTYLE = 'photostyle',
 	MERCH = 'merch',
-	RESULT = 'result',
+	RESULT_TEAM = 'result-team',
 }
 
 export const APLASTIC_ANCHORS: AnchorConfig[] = [
 	{ id: AplasticAnchorId.TASK_SOLUTION, text: 'Задача и решение' },
 	{ id: AplasticAnchorId.VISUAL_SYSTEM, text: 'Визуальная система' },
-	{ id: AplasticAnchorId.OFFLINE_DIGITAL, text: 'Офлайн и диджитал' },
+	{ id: AplasticAnchorId.STRATEGY, text: 'Стратегия' },
+	{ id: AplasticAnchorId.MECHANICS, text: 'Вирусная механика' },
+	{ id: AplasticAnchorId.WEBSITE, text: 'Сайт' },
+	{ id: AplasticAnchorId.PHOTOSTYLE, text: 'Фотостиль' },
 	{ id: AplasticAnchorId.MERCH, text: 'Мерч' },
-	{ id: AplasticAnchorId.RESULT, text: 'Результат' },
+	{ id: AplasticAnchorId.RESULT_TEAM, text: 'Результат и команда' },
 ]
