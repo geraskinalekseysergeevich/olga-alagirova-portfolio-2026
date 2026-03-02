@@ -8,6 +8,7 @@
 .grid {
 	display: grid;
 	grid-template-columns: 220fr 1060fr;
+	gap: 40px;
 }
 
 .navigation {
