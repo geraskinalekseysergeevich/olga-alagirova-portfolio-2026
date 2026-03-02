@@ -1,13 +1,17 @@
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 
 import { Navbar } from '../navbar/navbar'
 
 export const Layout = () => {
 	const { pathname, hash } = useLocation()
+	const previousPathnameRef = useRef(pathname)
 
 	useLayoutEffect(() => {
-		if (hash) {
+		const isPathnameChanged = previousPathnameRef.current !== pathname
+		previousPathnameRef.current = pathname
+
+		if (!isPathnameChanged || hash) {
 			return
 		}
 

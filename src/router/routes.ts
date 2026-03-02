@@ -1,2 +1,7 @@
 export const CV_ROUTE = '/cv'
 export const MAIN_ROUTE = '/'
+export const CASES_ROUTE = '/cases'
+export const APLASTIC_ROUTE = 'aplastic'
+export const SBER_SELLER_ROUTE = 'sber-seller'
+export const GKB_DAVYDOVSKY_ROUTE = 'gkb-davydovsky'
+export const VK_LIGHTS_ROUTE = 'vk-lights'

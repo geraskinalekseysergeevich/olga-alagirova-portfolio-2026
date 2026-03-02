@@ -1,0 +1,28 @@
+.container {
+	padding-top: 110px;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+
+.container section[id] {
+	scroll-margin-top: 140px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 220fr 1060fr;
+	gap: 40px;
+}
+
+.navigation {
+	position: sticky;
+	top: 100px;
+	align-self: start;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}

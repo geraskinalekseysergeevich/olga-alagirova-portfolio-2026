@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { type CSSProperties, useCallback, useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-import { CV_ROUTE, MAIN_ROUTE } from '../../router/routes'
+import { CASES_ROUTE, CV_ROUTE, MAIN_ROUTE } from '../../router/routes'
 import styles from './navbar.module.css'
 import { NavbarItem } from './navbar-item/navbar-item'
 
@@ -38,15 +38,38 @@ const NAVBAR_CONFIGS: Partial<Record<string, NavbarConfig>> = {
 	},
 }
 
-const resolveNavbarConfig = (pathname: string): NavbarConfig => NAVBAR_CONFIGS[pathname] ?? DEFAULT_NAVBAR_CONFIG
+const getCasesNavbarConfig = (pathname: string): NavbarConfig => ({
+	anchors: [{ label: 'Contacts', to: `${pathname}#contacts` }],
+	pageLinks: [
+		{ label: 'Main', to: MAIN_ROUTE, theme: 'dark' },
+		{ label: 'CV', to: CV_ROUTE, theme: 'dark' },
+	],
+})
+
+const resolveNavbarConfig = (pathname: string): NavbarConfig => {
+	if (pathname.startsWith(`${CASES_ROUTE}/`)) {
+		return getCasesNavbarConfig(pathname)
+	}
+
+	return NAVBAR_CONFIGS[pathname] ?? DEFAULT_NAVBAR_CONFIG
+}
 
 export const Navbar = () => {
-	const { pathname } = useLocation()
+	const { pathname, search, hash } = useLocation()
+	const navigate = useNavigate()
 	const navRef = useRef<HTMLElement>(null)
 	const contentRef = useRef<HTMLDivElement>(null)
 	const [configPathname, setConfigPathname] = useState(pathname)
 	const [isVisible, setIsVisible] = useState(true)
 	const [contentWidth, setContentWidth] = useState<number | null>(null)
+
+	const handleLogoClick = useCallback(() => {
+		if (hash) {
+			navigate({ pathname, search }, { replace: true })
+		}
+
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+	}, [hash, navigate, pathname, search])
 
 	const updateWidth = useCallback(() => {
 		const navElement = navRef.current
@@ -146,7 +169,9 @@ export const Navbar = () => {
 			<nav className={styles.nav} ref={navRef} style={navStyle}>
 				<div className={styles.content} ref={contentRef}>
 					<div className={styles.logo}>
-						<h6>Olga Alagirova</h6>
+						<button className={styles.logoButton} onClick={handleLogoClick} type="button">
+							<h6>Olga Alagirova</h6>
+						</button>
 					</div>
 					<div className={clsx(styles.group, !isVisible && styles.hidden)}>
 						{currentConfig.anchors.map((item) => (

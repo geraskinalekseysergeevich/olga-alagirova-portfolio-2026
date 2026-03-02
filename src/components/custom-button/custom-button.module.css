@@ -1,9 +1,17 @@
 .button {
+	--button-shadow-hover: -3px 3px 10px 0px #00000040;
 	padding: 20px 30px;
 	background-color: var(--color-black);
-	box-shadow: -3px 3px 10px 0px #00000040;
 	border-radius: 10px;
 	width: fit-content;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.button:hover {
+	box-shadow: var(--button-shadow-hover);
+	transform: translateY(-1px);
 }
 
 .text {
