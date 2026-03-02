@@ -1,11 +1,9 @@
 .card {
 	display: grid;
-	grid-template-rows: 450fr 250fr;
 	--other-border-radius: 15px;
 }
 
 .image {
-	background-color: var(--color-black);
 	border-top-left-radius: var(--other-border-radius);
 	border-top-right-radius: var(--other-border-radius);
 }

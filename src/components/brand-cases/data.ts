@@ -7,7 +7,7 @@ import {
 } from '../../router/routes'
 
 export type BrandCase = {
-	imagePath: string
+	imagesSrc: string[]
 	caseName: string
 	title: string
 	paragraph: string
@@ -16,7 +16,7 @@ export type BrandCase = {
 
 export const BRAND_CASES: BrandCase[] = [
 	{
-		imagePath: '',
+		imagesSrc: ['/cases/aplastic/gallery/1.jpg', '/cases/aplastic/gallery/2.jpg', '/cases/aplastic/gallery/3.jpg'],
 		caseName: 'aplastic amҩa',
 		title: 'Фирменный стиль и сайт экопроекта',
 		paragraph:
@@ -24,7 +24,11 @@ export const BRAND_CASES: BrandCase[] = [
 		link: `${CASES_ROUTE}/${APLASTIC_ROUTE}`,
 	},
 	{
-		imagePath: '',
+		imagesSrc: [
+			'/cases/sber-seller/gallery/1.jpg',
+			'/cases/sber-seller/gallery/2.jpg',
+			'/cases/sber-seller/gallery/3.jpg',
+		],
 		caseName: 'SberSeller',
 		title: 'Редизайн и мерч сейлз-хауса Сбера',
 		paragraph:
@@ -32,7 +36,11 @@ export const BRAND_CASES: BrandCase[] = [
 		link: `${CASES_ROUTE}/${SBER_SELLER_ROUTE}`,
 	},
 	{
-		imagePath: '',
+		imagesSrc: [
+			'/cases/gkb-davydovsky/gallery/1.jpg',
+			'/cases/gkb-davydovsky/gallery/2.jpg',
+			'/cases/gkb-davydovsky/gallery/3.jpg',
+		],
 		caseName: 'ГКБ им. И.В.Давыдовского',
 		title: 'Фирменный стиль и сайт больницы',
 		paragraph:
@@ -40,7 +48,7 @@ export const BRAND_CASES: BrandCase[] = [
 		link: `${CASES_ROUTE}/${GKB_DAVYDOVSKY_ROUTE}`,
 	},
 	{
-		imagePath: '',
+		imagesSrc: ['/cases/vk-lights/gallery/1.jpg', '/cases/vk-lights/gallery/2.jpg', '/cases/vk-lights/gallery/3.jpg'],
 		caseName: 'Вконтакте',
 		title: 'Редизайн сервиса финансовой поддержки авторов',
 		paragraph:
