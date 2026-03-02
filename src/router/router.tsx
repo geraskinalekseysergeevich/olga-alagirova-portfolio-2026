@@ -2,10 +2,11 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 import { Layout } from '../components/layout/layout'
 import { AplasticPage } from '../pages/cases/aplastic/aplastic'
+import * as gkbDavydovsky from '../pages/cases/gkb-davydovsky/gkb-davydovsky'
 import { SberSellerPage } from '../pages/cases/sber-seller/sber-seller'
 import { CvPage } from '../pages/cv/cv'
 import { MainPage } from '../pages/main/main'
-import { APLASTIC_ROUTE, CASES_ROUTE, CV_ROUTE, MAIN_ROUTE, SBER_SELLER_ROUTE } from './routes'
+import { APLASTIC_ROUTE, CASES_ROUTE, CV_ROUTE, GKB_DAVYDOVSKY_ROUTE, MAIN_ROUTE, SBER_SELLER_ROUTE } from './routes'
 
 export const router = createBrowserRouter([
 	{
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
 					{
 						path: SBER_SELLER_ROUTE,
 						element: <SberSellerPage />,
+					},
+					{
+						path: GKB_DAVYDOVSKY_ROUTE,
+						element: <gkbDavydovsky.GkbDavydovskyPage />,
 					},
 					{
 						path: '*',
