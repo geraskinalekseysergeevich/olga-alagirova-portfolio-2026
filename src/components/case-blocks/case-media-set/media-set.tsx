@@ -1,12 +1,12 @@
 import { CaseVideo } from '../case-video/video'
-import styles from './image-set.module.css'
+import styles from './media-set.module.css'
 
-type CaseImageSetProps = {
+type CaseMediaSetProps = {
 	anchorId?: string
 	imagesSrc: string[]
 }
 
-export const CaseImageSet = ({ anchorId, imagesSrc }: CaseImageSetProps) => {
+export const CaseMediaSet = ({ anchorId, imagesSrc }: CaseMediaSetProps) => {
 	const isVideoSrc = (src: string) => {
 		const normalizedSrc = src.split('#')[0].split('?')[0].toLowerCase()
 		return normalizedSrc.endsWith('.mp4')

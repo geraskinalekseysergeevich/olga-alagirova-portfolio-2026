@@ -1,6 +1,6 @@
 import { CaseListButtons } from '../../../components/case-blocks/case-buttons/list-buttons'
 import { CaseFooter } from '../../../components/case-blocks/case-footer/footer'
-import { CaseImageSet } from '../../../components/case-blocks/case-image-set/image-set'
+import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/media-set'
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CaseVideo } from '../../../components/case-blocks/case-video/video'
@@ -30,13 +30,13 @@ export const AplasticPage = () => {
 				title="Визуальная система"
 				paragraph="Пиксель — как частица переработанного пластика. Основа дизайн-системы — квадрат (модуль). Все форматы квадратные. Разработана модульная сетка. Жёлтый квадрат стал фирменным образом бренда. Типографика поддерживает абхазский язык и использует квадратные точки в знаках препинания."
 			/>
-			<CaseImageSet imagesSrc={['/cases/aplastic/1.jpg']} />
+			<CaseMediaSet imagesSrc={['/cases/aplastic/1.jpg']} />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.STRATEGY}
 				title="Стратегия"
 				paragraph="Фокус на вирусную оффлайн-коммуникацию. Я исследовала локальный рынок и поняла, что в маленькой Абхазии уличная реклама работает эффективнее, чем попытка конкурировать в соцсетях с российским рынком. Коммуникация на двух языках — абхазском и русском. Введение фирменной интонации: абхазские междометия «Уоу!», «Ора!», «Ааи!» в начале заголовков стали узнаваемым приемом бренда."
 			/>
-			<CaseImageSet imagesSrc={['/cases/aplastic/2.jpg', '/cases/aplastic/3.jpg']} />
+			<CaseMediaSet imagesSrc={['/cases/aplastic/2.jpg', '/cases/aplastic/3.jpg']} />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.MECHANICS}
 				title="Вирусная механика"
@@ -48,19 +48,19 @@ export const AplasticPage = () => {
 				title="Сайт"
 				paragraph="Сайт построен на той же модульной системе. Интерфейс собирается из квадратов. Я спроектировала структуру, разработала визуальный язык и курировала разработчиков на этапе реализации."
 			/>
-			<CaseImageSet imagesSrc={['/cases/aplastic/4.jpg', '/cases/aplastic/5.jpg', '/cases/aplastic/6.jpg']} />
+			<CaseMediaSet imagesSrc={['/cases/aplastic/4.jpg', '/cases/aplastic/5.jpg', '/cases/aplastic/6.jpg']} />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.PHOTOSTYLE}
 				title="Фото-стиль"
 				paragraph="Объекты из переработанного пластика в природной среде Абхазии: зелень, море, песок. Искусственный материал возвращается в живой ландшафт."
 			/>
-			<CaseImageSet imagesSrc={['/cases/aplastic/7.jpg', '/cases/aplastic/8.jpg']} />
+			<CaseMediaSet imagesSrc={['/cases/aplastic/7.jpg', '/cases/aplastic/8.jpg']} />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.MERCH}
 				title="Мерч"
 				paragraph="Мерч из переработанного пластика — буквы абхазского алфавита. Из них производятся брелоки, которые можно получить за сданный килограмм пластика. Это усиливает локальную идентичность и превращает сортировку в ощутимый обмен."
 			/>
-			<CaseImageSet
+			<CaseMediaSet
 				imagesSrc={[
 					'/cases/aplastic/9.jpg',
 					'/cases/aplastic/10.jpg',
