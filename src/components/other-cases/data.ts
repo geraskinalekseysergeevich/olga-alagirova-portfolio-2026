@@ -10,7 +10,6 @@ export const OTHER_CASES: OtherCase[] = [
 		imagesSrc: [
 			'/cases/hahnanagas/1.jpg',
 			'/cases/hahnanagas/2.jpg',
-			'/cases/hahnanagas/intro.mp4',
 			'/cases/hahnanagas/3.jpg',
 			'/cases/hahnanagas/4.jpg',
 			'/cases/hahnanagas/5.jpg',
