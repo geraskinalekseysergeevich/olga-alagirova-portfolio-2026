@@ -4,6 +4,7 @@ import { CaseImageSet } from '../../../components/case-blocks/case-image-set/ima
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CaseVideo } from '../../../components/case-blocks/case-video/video'
+import { CaseVideoReels } from '../../../components/case-blocks/case-video/video-reels/video-reels'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
 import { CASES_ROUTE, SBER_SELLER_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
 import { APLASTIC_ANCHORS, AplasticAnchorId } from './anchors'
@@ -23,7 +24,7 @@ export const AplasticPage = () => {
 				title="Решение"
 				paragraph="Я построила концепцию вокруг идеи: «Сдайте нам пластик — и мы вернем его городу в новом обличии». Пластик проходит путь — от отхода к дизайнерскому объекту городской среды. Так родился нейминг на абхазском языке — название, которое переводится как «путь пластика». Я самостоятельно провела ресерч языка и собрала корректное сочетание слов."
 			/>
-			<CaseVideo />
+			<CaseVideo src="/cases/aplastic/video/design-system.mp4" />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.VISUAL_SYSTEM}
 				title="Визуальная система"
@@ -41,7 +42,7 @@ export const AplasticPage = () => {
 				title="Вирусная механика"
 				paragraph="Формат интерактивных городских плакатов: половина — типографическая, половина — фото объекта в природной среде Абхазии. Сам объект закрыт желтой пиксельной маской. QR-код ведет на сайт, где можно «распикселить» объект. Так офлайн трафик переводится в digital. Плакаты модульные и комбинируются между собой."
 			/>
-			<CaseVideo />
+			<CaseVideo src="/cases/aplastic/video/website.mp4" />
 			<CaseTextBlock
 				anchorId={AplasticAnchorId.WEBSITE}
 				title="Сайт"
@@ -72,7 +73,7 @@ export const AplasticPage = () => {
 				title="Результат"
 				paragraph="Проект реализован и работает. Благодаря вирусной офлайн-рекламе о проекте узнало более 150 человек, перешедших на сайт. Из них более 80 человек посетили выставку и открытый лекторий, посвященный переработке пластика с брендом «aplastic amҩa»."
 			/>
-			<CaseVideo />
+			<CaseVideoReels src="/cases/aplastic/video/reels.mp4" />
 			<CaseFooter
 				title="Команда проекта"
 				paragraph="Арт-директор / дизайнер — Ольга Алагирова

@@ -34,7 +34,14 @@ export const SberSellerPage = () => {
 				title="Идея"
 				paragraph="Мы сформулировали позиционирование: «СберСеллер — всегда там, где точки внимания». Сервис помогает бизнесу находить и усиливать точки внимания целевой аудитории. Эта мысль стала основой визуальной системы."
 			/>
-			<CaseImageSet imagesSrc={['/cases/sber-seller/3.jpg', '/cases/sber-seller/4.jpg', '/cases/sber-seller/5.jpg']} />
+			<CaseImageSet
+				imagesSrc={[
+					'/cases/sber-seller/3.jpg',
+					'/cases/sber-seller/video/intro.mp4',
+					'/cases/sber-seller/4.jpg',
+					'/cases/sber-seller/5.jpg',
+				]}
+			/>
 			<CaseTextBlock
 				anchorId={SberAnchorId.SYSTEM}
 				title="Система и масштабирование"
