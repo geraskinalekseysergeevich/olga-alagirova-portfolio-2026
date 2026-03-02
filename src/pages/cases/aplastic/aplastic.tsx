@@ -5,7 +5,7 @@ import { CasePageHeader } from '../../../components/case-blocks/case-page-header
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CaseVideo } from '../../../components/case-blocks/case-video/video'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { CASES_ROUTE, SBER_SELLER_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, SBER_SELLER_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
 import { APLASTIC_ANCHORS, AplasticAnchorId } from './anchors'
 
 export const AplasticPage = () => {
@@ -77,7 +77,7 @@ export const AplasticPage = () => {
           Разработчик сайта — Алексей Гераськин"
 				year="2025"
 			/>
-			<CaseListButtons previous="" next={`${CASES_ROUTE}/${SBER_SELLER_ROUTE}`} />
+			<CaseListButtons previous={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} next={`${CASES_ROUTE}/${SBER_SELLER_ROUTE}`} />
 		</CasePageTemplate>
 	)
 }
