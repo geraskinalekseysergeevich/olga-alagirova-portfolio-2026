@@ -61,7 +61,8 @@ export const GkbDavydovskyPage = () => {
 			<CaseFooter
 				anchorId={GkbDavydovskyAnchorId.PROJECT_TEAM}
 				title="Команда проекта"
-				paragraph="Креативный директор — Константин Токарев Арт-дирекшн и дизайн — Ольга Алагирова"
+				paragraph="Креативный директор — Константин Токарев
+				Арт-дирекшн и дизайн — Ольга Алагирова"
 				year="2025"
 			/>
 			<CaseListButtons previous={`${CASES_ROUTE}/${SBER_SELLER_ROUTE}`} next={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} />
