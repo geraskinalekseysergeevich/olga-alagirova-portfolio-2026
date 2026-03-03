@@ -1,0 +1,42 @@
+.container {
+	display: block;
+	will-change: transform;
+	transform-origin: var(--shake-origin, 50% 50%);
+	transform: rotate(var(--shake-base-angle, 0deg));
+}
+
+.shaking {
+	animation: shakeAroundBase var(--shake-duration, 0.85s) ease-out;
+}
+
+@keyframes shakeAroundBase {
+	0% {
+		transform: rotate(var(--shake-base-angle, 0deg));
+	}
+
+	20% {
+		transform: rotate(calc(var(--shake-base-angle, 0deg) + var(--shake-offset-1, 3.6deg)));
+	}
+
+	40% {
+		transform: rotate(calc(var(--shake-base-angle, 0deg) + var(--shake-offset-2, -3deg)));
+	}
+
+	60% {
+		transform: rotate(calc(var(--shake-base-angle, 0deg) + var(--shake-offset-3, 2deg)));
+	}
+
+	80% {
+		transform: rotate(calc(var(--shake-base-angle, 0deg) + var(--shake-offset-4, -1deg)));
+	}
+
+	100% {
+		transform: rotate(var(--shake-base-angle, 0deg));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.shaking {
+		animation: none;
+	}
+}

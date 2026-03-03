@@ -15,14 +15,19 @@
 	z-index: 2;
 }
 
-.avatar {
+.avatarFrame {
 	position: absolute;
 	top: 42px;
 	left: 10px;
 	width: 320px;
 	height: 320px;
+	z-index: 1;
+}
+
+.avatar {
+	display: block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	border-radius: 10px;
-	transform: rotate(-5deg);
-	z-index: 1;
 }
