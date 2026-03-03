@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { CASES_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, EGGLESTON_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
 import { HAHNANAGAS_ANCHORS, HahnanagasAnchorId } from './anchors'
 
 export const HahnanagasPage = () => {
@@ -50,7 +50,7 @@ export const HahnanagasPage = () => {
 			/>
 			<CaseMediaSet imagesSrc={['/cases/hahnanagas/7.jpg']} />
 			<CaseFooter title="Команда проекта" paragraph="Концепция и дизайн — Ольга Алагирова" year="2026" />
-			<CaseListButtons previous={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} next={''} />
+			<CaseListButtons previous={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} next={`${CASES_ROUTE}/${EGGLESTON_ROUTE}`} />
 		</CasePageTemplate>
 	)
 }
