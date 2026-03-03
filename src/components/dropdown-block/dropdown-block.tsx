@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { useState } from 'react'
 
 import ArrowIcon from '../../assets/icons/arrow.svg'
@@ -12,6 +13,7 @@ type DropdownBlockProps = {
 
 export const DropdownBlock = ({ cvCase }: DropdownBlockProps) => {
 	const [isOpen, setIsOpen] = useState(false)
+	const hasFullText = Boolean(cvCase.fullText?.length)
 
 	return (
 		<div className={styles.container}>
@@ -19,21 +21,27 @@ export const DropdownBlock = ({ cvCase }: DropdownBlockProps) => {
 			<BodyText text={cvCase.role} customClass={styles.role} />
 			<BodyText text={cvCase.previewText} />
 
-			{cvCase.fullText && isOpen && (
-				<div className={styles.cases}>
-					{cvCase.fullText.map((item: FullTextList, index) => (
-						<BulletsBlock key={index} fullText={item} />
-					))}
+			{hasFullText && (
+				<div className={clsx(styles.casesWrap, isOpen && styles.casesWrapOpen)} aria-hidden={!isOpen}>
+					<div className={styles.casesInner}>
+						<div className={styles.cases}>
+							{cvCase.fullText?.map((item: FullTextList, index) => (
+								<BulletsBlock key={index} fullText={item} />
+							))}
+						</div>
+					</div>
 				</div>
 			)}
 
-			{cvCase.fullText && (
-				<button type="button" onClick={() => setIsOpen(!isOpen)}>
-					{isOpen ? (
-						<img src={ArrowIcon} className={styles.rotated} alt="Closed arrow" />
-					) : (
-						<img src={ArrowIcon} alt="Open arrow" />
-					)}
+			{hasFullText && (
+				<button
+					type="button"
+					className={styles.toggleButton}
+					aria-expanded={isOpen}
+					aria-label={isOpen ? 'Collapse details' : 'Expand details'}
+					onClick={() => setIsOpen(!isOpen)}
+				>
+					<img src={ArrowIcon} className={clsx(styles.arrow, isOpen && styles.arrowOpen)} alt="" />
 				</button>
 			)}
 		</div>
