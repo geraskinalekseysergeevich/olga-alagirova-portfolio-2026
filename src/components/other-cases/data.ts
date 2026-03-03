@@ -1,4 +1,4 @@
-import { CASES_ROUTE, VK_LIGHTS_ROUTE } from '../../router/routes'
+import { CASES_ROUTE, HAHNANAGAS_ROUTE, VK_LIGHTS_ROUTE } from '../../router/routes'
 
 export type OtherCase = {
 	imageSrc: string
@@ -22,8 +22,8 @@ export const OTHER_CASES: OtherCase[] = [
 		caseName: 'Ҳахьнанагаз',
 		title: 'Айдентика travel-шоу',
 		paragraph:
-			'Разработала визуальную концепцию шоу, а также анимационную заставку и шаблоны для социальных сетей. Первый выпуск уже на YouTube.',
-		link: '',
+			'Разработала визуальную концепцию шоу, а также анимационную заставку и шаблоны для социальных сетей. Первый выпуск уже на YouTube.',
+		link: `${CASES_ROUTE}/${HAHNANAGAS_ROUTE}`,
 	},
 	{
 		imageSrc: '/cases/eggleston/preview.jpg',

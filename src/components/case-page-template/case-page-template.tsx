@@ -9,7 +9,7 @@ import styles from './case-page-template.module.css'
 type CasePageTemplateProps = {
 	navigation: AnchorConfig[]
 	children: ReactNode
-	header?: ReactNode
+	header: ReactNode
 }
 
 export const CasePageTemplate = ({ navigation, children, header }: CasePageTemplateProps) => {

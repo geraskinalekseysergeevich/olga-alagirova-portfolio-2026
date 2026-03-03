@@ -3,6 +3,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 import { Layout } from '../components/layout/layout'
 import { AplasticPage } from '../pages/cases/aplastic/aplastic'
 import { GkbDavydovskyPage } from '../pages/cases/gkb-davydovsky/gkb-davydovsky'
+import { HahnanagasPage } from '../pages/cases/hahnanagas/hahnanagas'
 import { SberSellerPage } from '../pages/cases/sber-seller/sber-seller'
 import { VkLightsPage } from '../pages/cases/vk-lights/vk-lights'
 import { CvPage } from '../pages/cv/cv'
@@ -12,6 +13,7 @@ import {
 	CASES_ROUTE,
 	CV_ROUTE,
 	GKB_DAVYDOVSKY_ROUTE,
+	HAHNANAGAS_ROUTE,
 	MAIN_ROUTE,
 	SBER_SELLER_ROUTE,
 	VK_LIGHTS_ROUTE,
@@ -51,6 +53,10 @@ export const router = createBrowserRouter([
 					{
 						path: VK_LIGHTS_ROUTE,
 						element: <VkLightsPage />,
+					},
+					{
+						path: HAHNANAGAS_ROUTE,
+						element: <HahnanagasPage />,
 					},
 					{
 						path: '*',
