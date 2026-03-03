@@ -1,10 +1,4 @@
-import {
-	APLASTIC_ROUTE,
-	CASES_ROUTE,
-	GKB_DAVYDOVSKY_ROUTE,
-	SBER_SELLER_ROUTE,
-	VK_LIGHTS_ROUTE,
-} from '../../router/routes'
+import { APLASTIC_ROUTE, CASES_ROUTE, GKB_DAVYDOVSKY_ROUTE, SBER_SELLER_ROUTE } from '../../router/routes'
 
 export type BrandCase = {
 	imagesSrc: string[]
@@ -46,13 +40,5 @@ export const BRAND_CASES: BrandCase[] = [
 		paragraph:
 			'Разработала айдентику и сайт государственной больницы в роли арт-директора. Курировала внедрение фирменного стиля во всех носителях — от печатных материалов до социальных сетей и многостраничного сайта. Проект реализован и работает.',
 		link: `${CASES_ROUTE}/${GKB_DAVYDOVSKY_ROUTE}`,
-	},
-	{
-		imagesSrc: ['/cases/vk-lights/gallery/1.jpg', '/cases/vk-lights/gallery/2.jpg', '/cases/vk-lights/gallery/3.jpg'],
-		caseName: 'Вконтакте',
-		title: 'Редизайн сервиса финансовой поддержки авторов',
-		paragraph:
-			'Разработала новую айдентику и позиционирование для инструмента ВКонтакте, с помощью которого подписчики финансово поддерживают любимые сообщества. Проект сделан за один рабочий день и занял первое место в конкурсе VK Designers.',
-		link: `${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`,
 	},
 ]

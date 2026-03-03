@@ -13,7 +13,7 @@ export const VkLightsPage = () => {
 			navigation={VK_LIGHTS_ANCHORS}
 			header={
 				<CasePageHeader
-					texts={['Редизайн сервиса', 'финансовой поддержки', 'авторов Вконтакте']}
+					texts={['Редизайн сервиса', 'финансовой поддержки', 'авторов VK']}
 					imgSrc={'/cases/vk-lights/header.jpg'}
 				/>
 			}
