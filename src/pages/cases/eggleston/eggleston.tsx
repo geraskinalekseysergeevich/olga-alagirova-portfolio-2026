@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { CASES_ROUTE, HAHNANAGAS_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, HAHNANAGAS_ROUTE, SOFIA_SONECHKA_ROUTE } from '../../../router/routes'
 import { EGGLESTON_ANCHORS, EgglestonAnchorId } from './anchors'
 
 export const EgglestonPage = () => {
@@ -54,7 +54,10 @@ export const EgglestonPage = () => {
 				paragraph="Я разработала концепцию цветовой навигации, структуру каталога, систему набора и логику взаимодействия текста и изображения. Сверстала книгу и подготовила макет к печати."
 			/>
 			<CaseFooter title="Команда проекта" paragraph="Дизайн и вёрстка — Ольга Алагирова" year="2023" />
-			<CaseListButtons previous={`${CASES_ROUTE}/${HAHNANAGAS_ROUTE}`} next="" />
+			<CaseListButtons
+				previous={`${CASES_ROUTE}/${HAHNANAGAS_ROUTE}`}
+				next={`${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`}
+			/>
 		</CasePageTemplate>
 	)
 }

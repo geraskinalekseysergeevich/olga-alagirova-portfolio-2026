@@ -6,6 +6,7 @@ import { EgglestonPage } from '../pages/cases/eggleston/eggleston'
 import { GkbDavydovskyPage } from '../pages/cases/gkb-davydovsky/gkb-davydovsky'
 import { HahnanagasPage } from '../pages/cases/hahnanagas/hahnanagas'
 import { SberSellerPage } from '../pages/cases/sber-seller/sber-seller'
+import { SofiaSonechkaPage } from '../pages/cases/sofia-sonechka/sofia-sonechka'
 import { VkLightsPage } from '../pages/cases/vk-lights/vk-lights'
 import { CvPage } from '../pages/cv/cv'
 import { MainPage } from '../pages/main/main'
@@ -18,6 +19,7 @@ import {
 	HAHNANAGAS_ROUTE,
 	MAIN_ROUTE,
 	SBER_SELLER_ROUTE,
+	SOFIA_SONECHKA_ROUTE,
 	VK_LIGHTS_ROUTE,
 } from './routes'
 
@@ -63,6 +65,10 @@ export const router = createBrowserRouter([
 					{
 						path: EGGLESTON_ROUTE,
 						element: <EgglestonPage />,
+					},
+					{
+						path: SOFIA_SONECHKA_ROUTE,
+						element: <SofiaSonechkaPage />,
 					},
 					{
 						path: '*',

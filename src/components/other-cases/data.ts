@@ -1,4 +1,10 @@
-import { CASES_ROUTE, EGGLESTON_ROUTE, HAHNANAGAS_ROUTE, VK_LIGHTS_ROUTE } from '../../router/routes'
+import {
+	CASES_ROUTE,
+	EGGLESTON_ROUTE,
+	HAHNANAGAS_ROUTE,
+	SOFIA_SONECHKA_ROUTE,
+	VK_LIGHTS_ROUTE,
+} from '../../router/routes'
 
 export type OtherCase = {
 	imageSrc: string
@@ -39,6 +45,6 @@ export const OTHER_CASES: OtherCase[] = [
 		title: 'Дизайн и верстка пьесы',
 		paragraph:
 			'Разработала макет, обложку и сверстала пьесу, посвященную становлению молодой женщины. Издан малый тираж. Проект был приглашен на выставку «Продолжить просмотр» в галерее Artefice.',
-		link: '',
+		link: `${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`,
 	},
 ]
