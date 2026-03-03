@@ -1,8 +1,7 @@
-import clsx from 'clsx'
-
 import type { BrandCase } from '../brand-cases/data'
 import { CustomButton } from '../custom-button/custom-button'
 import { ImageGallery } from '../image-gallery/image-gallery'
+import { BodyAccentText, BodyText } from '../texts/texts'
 import styles from './brand-case-card.module.css'
 
 type BrandCaseCardProps = {
@@ -17,9 +16,9 @@ export const BrandCaseCard = ({ brandCase }: BrandCaseCardProps) => {
 			</div>
 			<div className={styles.right}>
 				<div className={styles.texts}>
-					<p className={clsx('bodyAccent', styles.caseName)}>{brandCase.caseName}</p>
+					<BodyAccentText text={brandCase.caseName} customClass={styles.caseName} />
 					<h2>{brandCase.title}</h2>
-					<p className={clsx('body', styles.caseParagraph)}>{brandCase.paragraph}</p>
+					<BodyText text={brandCase.paragraph} customClass={styles.caseParagraph} />
 				</div>
 				<CustomButton to={brandCase.link} text="View" />
 			</div>

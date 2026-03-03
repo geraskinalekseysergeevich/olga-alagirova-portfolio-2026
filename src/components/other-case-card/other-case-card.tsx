@@ -1,7 +1,6 @@
-import clsx from 'clsx'
-
 import { ImageGallery } from '../image-gallery/image-gallery'
 import type { OtherCase } from '../other-cases/data'
+import { BodyAccentText, BodyText } from '../texts/texts'
 import styles from './other-case-card.module.css'
 
 type OtherCaseCardProps = {
@@ -15,9 +14,9 @@ export const OtherCaseCard = ({ otherCase }: OtherCaseCardProps) => {
 				<ImageGallery imagesSrc={otherCase.imagesSrc} />
 			</div>
 			<div className={styles.bottom}>
-				<p className={clsx('bodyAccent', styles.caseName)}>{otherCase.caseName}</p>
+				<BodyAccentText text={otherCase.caseName} customClass={styles.caseName} />
 				<h2>{otherCase.title}</h2>
-				<p className={clsx('body', styles.caseParagraph)}>{otherCase.paragraph}</p>
+				<BodyText text={otherCase.paragraph} customClass={styles.caseParagraph} />
 			</div>
 		</div>
 	)
