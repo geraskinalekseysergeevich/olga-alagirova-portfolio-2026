@@ -26,6 +26,11 @@
 	padding: 40px;
 	border-bottom-left-radius: var(--other-border-radius);
 	border-bottom-right-radius: var(--other-border-radius);
+
+	@media (max-width: 1024px) {
+		padding: 36px;
+		gap: 36px;
+	}
 }
 
 .bottom > :last-child {
@@ -35,7 +40,7 @@
 .texts {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: var(--gap-20);
 }
 
 .caseName,
