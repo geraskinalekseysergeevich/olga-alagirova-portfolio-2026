@@ -10,7 +10,7 @@ type OtherCaseCardProps = {
 export const OtherCaseCard = ({ otherCase }: OtherCaseCardProps) => {
 	return (
 		<div className={styles.card}>
-			<div className={styles.image}>
+			<div className={styles.imageWrap}>
 				<img src={otherCase.imageSrc} alt="Case preview" className={styles.image} />
 			</div>
 			<div className={styles.bottom}>

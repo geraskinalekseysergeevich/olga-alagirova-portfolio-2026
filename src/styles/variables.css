@@ -4,6 +4,10 @@ h1 {
 	font-size: 75px;
 	line-height: 120%;
 	letter-spacing: 0;
+
+	@media (max-width: 1200px) {
+		font-size: 65px;
+	}
 }
 
 h2 {
@@ -12,6 +16,10 @@ h2 {
 	font-size: 30px;
 	line-height: 120%;
 	letter-spacing: 0;
+
+	@media (max-width: 1200px) {
+		font-size: 25px;
+	}
 }
 
 h4 {
@@ -36,6 +44,10 @@ h6 {
 	font-size: 16px;
 	line-height: 150%;
 	letter-spacing: 0;
+
+	@media (max-width: 1200px) {
+		font-size: 14px;
+	}
 }
 
 .bodyAccent {
@@ -44,6 +56,10 @@ h6 {
 	font-size: 16px;
 	line-height: 150%;
 	letter-spacing: 0;
+
+	@media (max-width: 1200px) {
+		font-size: 14px;
+	}
 }
 
 .caption {
@@ -63,4 +79,12 @@ h6 {
 	--color-cards-white: #ffffff;
 	--color-cards-gray: #e2e2e2;
 	--color-cards-black: #232323;
+
+	--gap-150: 150px;
+	--gap-100: 100px;
+
+	@media (max-width: 1200px) {
+		--gap-100: 80px;
+		--gap-150: 120px;
+	}
 }

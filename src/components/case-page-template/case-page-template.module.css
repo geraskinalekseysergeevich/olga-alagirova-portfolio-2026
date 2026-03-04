@@ -2,7 +2,7 @@
 	padding-top: 110px;
 	display: flex;
 	flex-direction: column;
-	gap: 100px;
+	gap: var(--gap-100);
 }
 
 .container section[id] {
@@ -24,5 +24,5 @@
 .content {
 	display: flex;
 	flex-direction: column;
-	gap: 100px;
+	gap: var(--gap-100);
 }

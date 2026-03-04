@@ -11,6 +11,10 @@
 	will-change: transform;
 	background-color: var(--color-cards-white);
 	color: var(--color-cards-black);
+
+	@media (max-width: 1200px) {
+		height: 323px;
+	}
 }
 
 .cardGray {

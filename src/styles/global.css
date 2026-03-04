@@ -59,4 +59,8 @@ body {
 	padding: 30px 80px 150px 80px;
 	max-width: 1440px;
 	margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		padding: 30px 80px 100px 80px;
+	}
 }

@@ -3,7 +3,7 @@
 	padding-top: 240px;
 	display: flex;
 	flex-direction: column;
-	gap: 150px;
+	gap: var(--gap-150);
 }
 
 .hero {

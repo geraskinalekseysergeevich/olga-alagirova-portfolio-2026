@@ -1,11 +1,21 @@
 .card {
 	display: grid;
+	grid-template-rows: auto 1fr;
+	height: 100%;
 	--other-border-radius: 15px;
 }
 
-.image {
+.imageWrap {
 	border-top-left-radius: var(--other-border-radius);
 	border-top-right-radius: var(--other-border-radius);
+	overflow: hidden;
+	line-height: 0;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .bottom {
@@ -16,6 +26,10 @@
 	padding: 40px;
 	border-bottom-left-radius: var(--other-border-radius);
 	border-bottom-right-radius: var(--other-border-radius);
+}
+
+.bottom > :last-child {
+	margin-top: auto;
 }
 
 .texts {
