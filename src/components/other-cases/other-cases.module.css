@@ -9,4 +9,8 @@
 	grid-template-columns: 1fr 1fr;
 	align-items: stretch;
 	gap: var(--gap-100) 40px;
+
+	@media (max-width: 1024px) {
+		column-gap: 30px;
+	}
 }

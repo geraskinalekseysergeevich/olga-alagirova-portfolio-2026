@@ -7,6 +7,16 @@
 	transition:
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
+
+	@media (max-width: 1200px) {
+		padding: 16px 24px;
+		border-radius: 8px;
+	}
+
+	@media (max-width: 1024px) {
+		padding: 13px 20px;
+		border-radius: 6px;
+	}
 }
 
 .button:hover {
