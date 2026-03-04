@@ -49,25 +49,6 @@ export const AboutCards = () => {
 			return
 		}
 
-		const syncCardHeights = () => {
-			if (!ABOUT_CARDS_ANIMATION_CONFIG.equalizeHeights) {
-				return
-			}
-
-			cards.forEach((card) => {
-				card.style.height = 'auto'
-			})
-
-			const maxHeight = Math.ceil(Math.max(...cards.map((card) => card.getBoundingClientRect().height)))
-
-			cards.forEach((card) => {
-				card.style.height = `${maxHeight}px`
-			})
-		}
-
-		syncCardHeights()
-		ScrollTrigger.addEventListener('refreshInit', syncCardHeights)
-
 		const gsapContext = gsap.context(() => {
 			const lastCardIndex = cards.length - 1
 			const lastCardPinBoundary = ScrollTrigger.create({
@@ -106,7 +87,6 @@ export const AboutCards = () => {
 		}, containerElement)
 
 		return () => {
-			ScrollTrigger.removeEventListener('refreshInit', syncCardHeights)
 			const cards = gsap.utils.toArray<HTMLElement>('[data-about-card]', containerElement)
 
 			cards.forEach((card) => {

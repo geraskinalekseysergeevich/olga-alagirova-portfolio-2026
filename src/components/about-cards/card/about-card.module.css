@@ -1,13 +1,14 @@
 .card {
-	position: relative;
-	transform-origin: center top;
-	will-change: transform;
 	width: 100%;
-	padding: 50px;
-	border-radius: 20px;
+	height: 336px;
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 150px;
+	justify-content: space-between;
+	padding: 50px;
+	border-radius: 20px;
+	transform-origin: center top;
+	will-change: transform;
 	background-color: var(--color-cards-white);
 	color: var(--color-cards-black);
 }

@@ -20,7 +20,7 @@ export const BrandCaseCard = ({ brandCase }: BrandCaseCardProps) => {
 					<h2>{brandCase.title}</h2>
 					<BodyText text={brandCase.paragraph} customClass={styles.caseParagraph} />
 				</div>
-				<CustomButton to={brandCase.link} text="View" />
+				<CustomButton to={brandCase.link} text="Узнать больше" />
 			</div>
 		</div>
 	)
