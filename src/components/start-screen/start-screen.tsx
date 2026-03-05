@@ -1,3 +1,5 @@
+import { type CSSProperties, useEffect, useState } from 'react'
+
 import Aduney from '../../assets/stickers/aduney.svg'
 import AplasticE from '../../assets/stickers/aplastic-e.svg'
 import AplasticPlanet from '../../assets/stickers/aplastic-planet.svg'
@@ -39,9 +41,51 @@ const STICKERS: StickerConfig[] = [
 	{ id: 'skater', src: Skater, positionClass: 'skater' },
 ]
 
+const SCALE_AT_1024 = 140 / 247
+const VIEWPORT_MAX = 1440
+const VIEWPORT_MIN = 640
+
+const getViewportWidth = () => {
+	if (typeof window === 'undefined') {
+		return VIEWPORT_MAX
+	}
+
+	return window.innerWidth
+}
+
+const getStickerScale = (width: number) => {
+	if (width >= VIEWPORT_MAX) {
+		return 1
+	}
+
+	if (width <= VIEWPORT_MIN) {
+		return SCALE_AT_1024
+	}
+
+	return SCALE_AT_1024 + ((width - VIEWPORT_MIN) * (1 - SCALE_AT_1024)) / (VIEWPORT_MAX - VIEWPORT_MIN)
+}
+
 export const StartScreen = () => {
+	const [viewportWidth, setViewportWidth] = useState(getViewportWidth)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setViewportWidth(window.innerWidth)
+		}
+
+		window.addEventListener('resize', handleResize)
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
+	const containerStyle = {
+		'--sticker-scale': `${getStickerScale(viewportWidth)}`,
+	} as CSSProperties
+
 	return (
-		<section className={styles.container}>
+		<section className={styles.container} style={containerStyle}>
 			<div aria-hidden className={styles.stickersLayer}>
 				{STICKERS.map((sticker) => (
 					<img
