@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import { type CSSProperties, useCallback, useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
+import topArrowIcon from '../../assets/icons/top-arrow.svg'
 import { CASES_ROUTE, CV_ROUTE, MAIN_ROUTE } from '../../router/routes'
 import styles from './navbar.module.css'
 import { NavbarItem } from './navbar-item/navbar-item'
@@ -141,13 +142,17 @@ export const Navbar = () => {
 	}, [updateWidth])
 
 	const currentConfig = resolveNavbarConfig(configPathname)
+	const currentMobileConfig = resolveNavbarConfig(configPathname)
+	const mobileAnchors = currentMobileConfig.anchors
+		.filter((item) => item.to !== '/#typography-others')
+		.map((item) => (item.to === '/#brand-cases' ? { ...item, label: 'Cases' } : item))
 	const navWidth = contentWidth ? `${contentWidth}px` : undefined
 	const navStyle = {
 		width: navWidth,
 	} as CSSProperties
 
 	return (
-		<div className={styles.shell}>
+		<>
 			<div aria-hidden className={styles.liquidDefs}>
 				<svg xmlns="http://www.w3.org/2000/svg">
 					<defs>
@@ -166,25 +171,56 @@ export const Navbar = () => {
 					</defs>
 				</svg>
 			</div>
-			<nav className={styles.nav} ref={navRef} style={navStyle}>
-				<div className={styles.content} ref={contentRef}>
-					<div className={styles.logo}>
-						<button className={styles.logoButton} onClick={handleLogoClick} type="button">
-							<h6>Olga Alagirova</h6>
-						</button>
+			<div className={styles.shell}>
+				<nav className={styles.nav} ref={navRef} style={navStyle}>
+					<div className={styles.content} ref={contentRef}>
+						<div className={styles.logo}>
+							<button className={styles.logoButton} onClick={handleLogoClick} type="button">
+								<h6>Olga Alagirova</h6>
+							</button>
+						</div>
+						<div className={clsx(styles.group, !isVisible && styles.hidden)}>
+							{currentConfig.anchors.map((item) => (
+								<NavbarItem key={`${item.to}-${item.label}`} text={item.label} to={item.to} theme={item.theme} />
+							))}
+						</div>
+						<div className={clsx(styles.group, !isVisible && styles.hidden)}>
+							{currentConfig.pageLinks.map((item) => (
+								<NavbarItem key={`${item.to}-${item.label}`} text={item.label} to={item.to} theme={item.theme} />
+							))}
+						</div>
 					</div>
-					<div className={clsx(styles.group, !isVisible && styles.hidden)}>
-						{currentConfig.anchors.map((item) => (
-							<NavbarItem key={`${item.to}-${item.label}`} text={item.label} to={item.to} theme={item.theme} />
+				</nav>
+			</div>
+			<div className={styles.mobileShell}>
+				<nav className={styles.mobileNav}>
+					<div className={clsx(styles.mobileContent, !isVisible && styles.mobileHidden)}>
+						<div className={styles.logo}>
+							<button aria-label="Scroll to top" className={styles.logoButton} onClick={handleLogoClick} type="button">
+								<img alt="" aria-hidden className={styles.mobileTopIcon} src={topArrowIcon} />
+							</button>
+						</div>
+						{mobileAnchors.map((item) => (
+							<NavbarItem
+								compact
+								key={`mobile-anchor-${item.to}-${item.label}`}
+								text={item.label}
+								to={item.to}
+								theme={item.theme}
+							/>
+						))}
+						{currentMobileConfig.pageLinks.map((item) => (
+							<NavbarItem
+								compact
+								key={`mobile-link-${item.to}-${item.label}`}
+								text={item.label}
+								to={item.to}
+								theme={item.theme}
+							/>
 						))}
 					</div>
-					<div className={clsx(styles.group, !isVisible && styles.hidden)}>
-						{currentConfig.pageLinks.map((item) => (
-							<NavbarItem key={`${item.to}-${item.label}`} text={item.label} to={item.to} theme={item.theme} />
-						))}
-					</div>
-				</div>
-			</nav>
-		</div>
+				</nav>
+			</div>
+		</>
 	)
 }

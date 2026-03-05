@@ -14,6 +14,11 @@
 		color 0.2s ease;
 }
 
+.buttonCompact {
+	padding: 12px 14px;
+	border-radius: 9px;
+}
+
 .buttonLight {
 	--button-bg: color-mix(in srgb, #bbbbbc 10%, transparent);
 	--button-color: #13151a;
@@ -82,4 +87,9 @@
 	position: relative;
 	z-index: 1;
 	line-height: 90%;
+}
+
+.textCompact {
+	font-size: 11px;
+	line-height: 120%;
 }

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { useState } from 'react'
 
-import ArrowIcon from '../../assets/icons/arrow.svg'
+import ArrowIcon from '../../assets/icons/bottom-arrow.svg'
 import type { CvCase, FullTextList } from '../../pages/cv/data-types'
 import { BodyText } from '../texts/texts'
 import { BulletsBlock } from './bullets-block/bullets-block'
