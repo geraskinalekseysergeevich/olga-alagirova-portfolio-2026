@@ -14,7 +14,7 @@
 		column-gap: 30px;
 	}
 
-	@media (max-width: 430px) {
+	@media (max-width: 640px) {
 		grid-template-columns: 1fr;
 	}
 }

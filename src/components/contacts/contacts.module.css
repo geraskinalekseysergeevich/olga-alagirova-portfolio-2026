@@ -9,7 +9,7 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
 
-	@media (max-width: 430px) {
+	@media (max-width: 640px) {
 		grid-template-columns: 1fr;
 		row-gap: 50px;
 	}
@@ -27,7 +27,7 @@
 .right {
 	justify-content: space-between;
 
-	@media (max-width: 430px) {
+	@media (max-width: 640px) {
 		gap: 30px;
 	}
 }
