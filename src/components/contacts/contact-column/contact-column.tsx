@@ -12,7 +12,7 @@ export const ContactColumn = ({ name, content }: ContactColumnProps) => {
 	return (
 		<div className={styles.container}>
 			<p className={clsx('body', styles.name)}>{name}</p>
-			<BodyText text={content} />
+			<BodyText text={content} customClass={styles.noWrap} />
 		</div>
 	)
 }

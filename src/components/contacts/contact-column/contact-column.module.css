@@ -8,3 +8,7 @@
 	color: var(--color-black);
 	opacity: 0.5;
 }
+
+.noWrap {
+	white-space: nowrap;
+}
