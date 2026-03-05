@@ -87,7 +87,7 @@ export const StartScreen = () => {
 
 	return (
 		<section className={styles.container} style={containerStyle}>
-			<div aria-hidden className={styles.stickersLayer}>
+			<div aria-hidden className={styles.stickersLayer} data-start-screen-stickers>
 				{STICKERS.map((sticker) => (
 					<ShakeAnimation
 						key={sticker.id}
@@ -100,7 +100,7 @@ export const StartScreen = () => {
 					</ShakeAnimation>
 				))}
 			</div>
-			<div className={styles.content}>
+			<div className={styles.content} data-start-screen-content>
 				<Title texts={['Olga Alagirova', 'Brand & Communication', 'Designer']} scrollDownText />
 			</div>
 		</section>

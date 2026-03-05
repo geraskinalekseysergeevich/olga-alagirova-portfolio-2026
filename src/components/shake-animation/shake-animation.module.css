@@ -40,3 +40,9 @@
 		animation: none;
 	}
 }
+
+@media (max-width: 768px) {
+	.shaking {
+		animation: none;
+	}
+}

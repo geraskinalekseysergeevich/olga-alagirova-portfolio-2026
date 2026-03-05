@@ -1,6 +1,7 @@
 import type { BrandCase } from '../brand-cases/data'
 import { CustomButton } from '../custom-button/custom-button'
 import { ImageGallery } from '../image-gallery/image-gallery'
+import { fixHangingPrepositions } from '../texts/fix-hanging-prepositions'
 import { BodyAccentText, BodyText } from '../texts/texts'
 import styles from './brand-case-card.module.css'
 
@@ -17,7 +18,7 @@ export const BrandCaseCard = ({ brandCase }: BrandCaseCardProps) => {
 			<div className={styles.right}>
 				<div className={styles.texts}>
 					<BodyAccentText text={brandCase.caseName} customClass={styles.caseName} />
-					<h2>{brandCase.title}</h2>
+					<h2>{fixHangingPrepositions(brandCase.title)}</h2>
 					<BodyText text={brandCase.paragraph} customClass={styles.caseParagraph} />
 				</div>
 				<CustomButton to={brandCase.link} text="Узнать больше" />

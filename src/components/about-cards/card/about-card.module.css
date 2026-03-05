@@ -24,9 +24,13 @@
 		height: 220px;
 	}
 
+	@media (max-width: 640px) {
+		height: 300px;
+		padding: 30px;
+	}
+
 	@media (max-width: 430px) {
 		height: 370px;
-		padding: 30px;
 	}
 }
 

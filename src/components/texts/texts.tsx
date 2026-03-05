@@ -1,16 +1,11 @@
 import clsx from 'clsx'
 import { Fragment } from 'react'
 
+import { fixHangingPrepositions } from './fix-hanging-prepositions'
+
 type TextProps = {
 	text: string
 	customClass?: string
-}
-
-const SHORT_RU_WORDS_PATTERN =
-	/(^|[^\p{L}\p{N}_])(а|и|в|к|с|у|о|я|но|да|не|на|по|из|за|до|от|об|во|со|ко|без|для|при|про|над|под)([ \t]+)/giu
-
-const fixHangingPrepositions = (text: string) => {
-	return text.replace(SHORT_RU_WORDS_PATTERN, (_, prefix: string, word: string) => `${prefix}${word}\u00A0`)
 }
 
 const dedentMultilineText = (text: string) => {

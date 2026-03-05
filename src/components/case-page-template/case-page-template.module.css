@@ -3,10 +3,18 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--gap-100);
+
+	@media (max-width: 640px) {
+		padding-top: 50px;
+	}
 }
 
 .container section[id] {
 	scroll-margin-top: 140px;
+
+	@media (max-width: 430px) {
+		scroll-margin-top: 50px;
+	}
 }
 
 .grid {

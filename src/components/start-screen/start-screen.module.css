@@ -13,6 +13,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 430px) {
+		padding-top: 0;
+	}
 }
 
 .stickersLayer {
@@ -26,7 +30,7 @@
 	position: absolute;
 	display: block;
 	user-select: none;
-	transform: scale(var(--sticker-scale));
+	scale: var(--sticker-scale);
 	pointer-events: auto;
 }
 
@@ -41,13 +45,13 @@
 .aplasticE {
 	top: calc((0 / var(--design-height)) * 100%);
 	left: calc((10 / var(--design-width)) * 100%);
-	transform-origin: top left;
+	transform-origin: left;
 }
 
 .aplasticPlanet {
 	top: calc((145 / var(--design-height)) * 100%);
 	left: calc((360 / var(--design-width)) * 100%);
-	transform-origin: top left;
+	transform-origin: right;
 }
 
 .aduney {
@@ -66,7 +70,7 @@
 .hahnanagas {
 	top: calc((10 / var(--design-height)) * 100%);
 	right: calc((260 / var(--design-width)) * 100%);
-	transform-origin: top right;
+	transform-origin: right;
 }
 
 .molecule {
@@ -101,12 +105,13 @@
 	}
 
 	.sticker {
-		transform: scale(0.9);
+		scale: 0.9;
 	}
 
 	.aplasticE {
 		top: -10px;
 		left: -10px;
+		scale: 0.8;
 	}
 
 	.aplasticPlanet {
@@ -115,23 +120,24 @@
 	}
 
 	.molecule {
-		top: calc((140 / 640) * 100%);
+		top: calc((20 / 640) * 100%);
 		right: 0;
 		left: auto;
-		transform: scale(0.7);
+		scale: 0.7;
 	}
 
 	.vkLightHand {
 		bottom: calc((100 / 640) * 100%);
 		left: 10px;
 		rotate: -10deg;
-		transform: scale(0.7);
+		scale: 0.7;
 	}
 
 	.vkLightMan {
 		bottom: calc((50 / 640) * 100%);
 		left: calc((200 / 640) * 100%);
-		transform: scale(0.7) rotate(-25deg);
+		scale: 0.7;
+		rotate: -25deg;
 	}
 
 	.skater {
@@ -143,10 +149,6 @@
 }
 
 @media (max-width: 580px) {
-	.sticker {
-		scale: 0.9;
-	}
-
 	.aplasticPlanet {
 		top: calc((50 / 580) * 100%);
 		right: calc((30 / 580) * 100%);
@@ -155,6 +157,7 @@
 
 	.molecule {
 		right: calc((80 / 580) * 100%);
+		top: calc((0 / 580) * 100%);
 	}
 
 	.vkLightHand {
@@ -175,12 +178,32 @@
 
 	@media (max-width: 430px) {
 		.aplasticPlanet {
-			top: calc((60 / 430) * 100%);
-			right: -25px;
+			top: calc((24 / 430) * 100%);
+			right: 4px;
+		}
+
+		.aplasticE {
+			top: -84px;
+			left: -10px;
+			scale: 0.7;
+		}
+
+		.vkLightHand {
+			scale: 0.6;
+			bottom: 155px;
 		}
 
 		.vkLightMan {
-			bottom: calc((30 / 430) * 100%);
+			bottom: calc((20 / 430) * 100%);
+			left: 114px;
+		}
+
+		.molecule {
+			top: -75px;
+		}
+
+		.skater {
+			bottom: 109px;
 		}
 	}
 }
