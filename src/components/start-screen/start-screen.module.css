@@ -1,0 +1,80 @@
+.container {
+	position: relative;
+	isolation: isolate;
+	overflow: clip;
+	min-height: 100vh;
+	min-height: 100svh;
+	min-height: 100dvh;
+	margin-top: -30px;
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.stickersLayer {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.sticker {
+	position: absolute;
+	display: block;
+	user-select: none;
+}
+
+.content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.aplasticE {
+	top: 0px;
+	left: 10px;
+}
+
+.aplasticPlanet {
+	top: 145px;
+	left: 305px;
+}
+
+.aduney {
+	top: 155px;
+	right: 30px;
+}
+
+.earphone {
+	bottom: 110px;
+	right: 195px;
+	z-index: 2;
+}
+
+.hahnanagas {
+	top: 10px;
+	right: 260px;
+}
+
+.molecule {
+	bottom: 70px;
+	left: 50%;
+}
+
+.skater {
+	bottom: 100px;
+	right: 0px;
+}
+
+.vkLightHand {
+	bottom: 90px;
+	left: 10px;
+}
+
+.vkLightMan {
+	bottom: 105px;
+	left: 215px;
+}
