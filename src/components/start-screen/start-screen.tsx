@@ -9,6 +9,7 @@ import Molecule from '../../assets/stickers/molecule.svg'
 import Skater from '../../assets/stickers/skater.svg'
 import VkLightHand from '../../assets/stickers/vk-lights-hand.svg'
 import VkLightMan from '../../assets/stickers/vk-lights-man.svg'
+import { ShakeAnimation } from '../shake-animation/shake-animation'
 import { Title } from '../title/title'
 import styles from './start-screen.module.css'
 
@@ -88,12 +89,15 @@ export const StartScreen = () => {
 		<section className={styles.container} style={containerStyle}>
 			<div aria-hidden className={styles.stickersLayer}>
 				{STICKERS.map((sticker) => (
-					<img
+					<ShakeAnimation
 						key={sticker.id}
-						alt=""
 						className={`${styles.sticker} ${styles[sticker.positionClass]}`}
-						src={sticker.src}
-					/>
+						baseAngleDeg={0}
+						transformOrigin="52% -20px"
+						durationMs={750}
+					>
+						<img alt="" src={sticker.src} />
+					</ShakeAnimation>
 				))}
 			</div>
 			<div className={styles.content}>

@@ -27,6 +27,7 @@
 	display: block;
 	user-select: none;
 	transform: scale(var(--sticker-scale));
+	pointer-events: auto;
 }
 
 .content {
