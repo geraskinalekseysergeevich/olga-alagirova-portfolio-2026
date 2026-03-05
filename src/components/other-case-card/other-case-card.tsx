@@ -1,3 +1,4 @@
+import { resolvePublicAssetUrl } from '../../utils/resolve-public-asset-url'
 import { CustomButton } from '../custom-button/custom-button'
 import type { OtherCase } from '../other-cases/data'
 import { fixHangingPrepositions } from '../texts/fix-hanging-prepositions'
@@ -12,7 +13,7 @@ export const OtherCaseCard = ({ otherCase }: OtherCaseCardProps) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.imageWrap}>
-				<img src={otherCase.imageSrc} alt="Case preview" className={styles.image} />
+				<img src={resolvePublicAssetUrl(otherCase.imageSrc)} alt="Case preview" className={styles.image} />
 			</div>
 			<div className={styles.bottom}>
 				<div className={styles.texts}>
