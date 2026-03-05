@@ -8,6 +8,11 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
+
+	@media (max-width: 430px) {
+		grid-template-columns: 1fr;
+		row-gap: 50px;
+	}
 }
 
 .column {
@@ -21,6 +26,10 @@
 
 .right {
 	justify-content: space-between;
+
+	@media (max-width: 430px) {
+		gap: 30px;
+	}
 }
 
 .header {
@@ -40,5 +49,10 @@
 	@media (max-width: 1024px) {
 		gap: 5px;
 		justify-content: space-between;
+	}
+
+	@media (max-width: 430px) {
+		flex-direction: column;
+		gap: 15px;
 	}
 }

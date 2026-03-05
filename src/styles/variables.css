@@ -16,6 +16,10 @@ h1 {
 	@media (max-width: 768px) {
 		font-size: 35px;
 	}
+
+	@media (max-width: 430px) {
+		font-size: 40px;
+	}
 }
 
 h2 {
@@ -35,6 +39,10 @@ h2 {
 
 	@media (max-width: 768px) {
 		font-size: 18px;
+	}
+
+	@media (max-width: 430px) {
+		font-size: 20px;
 	}
 }
 
@@ -68,6 +76,10 @@ h6 {
 	@media (max-width: 1024px) {
 		font-size: 12px;
 	}
+
+	@media (max-width: 430px) {
+		font-size: 16px;
+	}
 }
 
 .bodyAccent {
@@ -83,6 +95,10 @@ h6 {
 
 	@media (max-width: 1024px) {
 		font-size: 12px;
+	}
+
+	@media (max-width: 430px) {
+		font-size: 16px;
 	}
 }
 
@@ -124,5 +140,11 @@ h6 {
 		--gap-150: 100px;
 		--gap-100: 50px;
 		--gap-20: 18px;
+	}
+
+	@media (max-width: 430px) {
+		--gap-150: 120px;
+		--gap-100: 50px;
+		--gap-20: 15px;
 	}
 }

@@ -12,6 +12,10 @@
 	@media (max-width: 1200px) {
 		gap: 40px;
 	}
+
+	@media (max-width: 430px) {
+		gap: 20px;
+	}
 }
 
 .gray {
