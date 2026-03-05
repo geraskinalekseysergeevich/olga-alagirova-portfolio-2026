@@ -3,11 +3,31 @@
 	grid-template-columns: 770fr 510fr;
 	height: 650px;
 	--brand-border-radius: 15px;
+
+	@media (max-width: 1200px) {
+		height: 530px;
+	}
+
+	@media (max-width: 1024px) {
+		height: 442px;
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		height: auto;
+	}
 }
 
 .image {
 	border-bottom-left-radius: var(--brand-border-radius);
 	border-top-left-radius: var(--brand-border-radius);
+
+	@media (max-width: 768px) {
+		border-top-right-radius: var(--brand-border-radius);
+		border-bottom-left-radius: 0;
+		aspect-ratio: 688 / 580;
+	}
 }
 
 .right {
@@ -18,12 +38,32 @@
 	background-color: var(--color-white);
 	border-bottom-right-radius: var(--brand-border-radius);
 	border-top-right-radius: var(--brand-border-radius);
+
+	@media (max-width: 1200px) {
+		padding: 48px 48px 48px 32px;
+	}
+
+	@media (max-width: 1024px) {
+		padding: 40px 40px 40px 26px;
+	}
+
+	@media (max-width: 768px) {
+		gap: 36px;
+		padding: 36px;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: var(--brand-border-radius);
+	}
+
+	@media (max-width: 430px) {
+		gap: 30px;
+		padding: 30px;
+	}
 }
 
 .texts {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: var(--gap-20);
 }
 
 .caseName,

@@ -7,15 +7,23 @@
 	display: flex;
 	justify-content: center;
 	pointer-events: none;
+
+	@media (max-width: 640px) {
+		display: none;
+	}
 }
 
 .liquidDefs {
-	position: absolute;
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 0;
 	height: 0;
+	pointer-events: none;
 }
 
-.nav {
+.nav,
+.mobileNav {
 	--navbar-sections-gap: 30px;
 	--navbar-group-gap: 5px;
 	--navbar-transition-duration: 180ms;
@@ -24,7 +32,7 @@
 	--glass-reflex-dark: 1;
 	position: relative;
 	padding: 10px;
-	border-radius: 15px;
+	border-radius: 17px;
 	font-family: 'Inter', sans-serif;
 	background-color: color-mix(in srgb, var(--glass-color) 15%, transparent);
 	backdrop-filter: blur(10px) url(#navbar-liquid) saturate(125%);
@@ -44,6 +52,10 @@
 	will-change: width;
 	isolation: isolate;
 	overflow: hidden;
+
+	@media (max-width: 768px) {
+		--navbar-sections-gap: 20px;
+	}
 }
 
 .nav::before {
@@ -66,6 +78,7 @@
 
 .logo {
 	padding: 15px;
+	line-height: 90%;
 
 	h6 {
 		white-space: nowrap;
@@ -97,4 +110,66 @@
 	opacity: 0;
 	transform: translateY(-6px);
 	pointer-events: none;
+}
+
+.mobileShell {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	z-index: 1000;
+	display: none;
+	justify-content: center;
+	pointer-events: none;
+
+	@media (max-width: 640px) {
+		display: flex;
+	}
+}
+
+.mobileNav::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 48%, transparent 100%);
+	z-index: 0;
+}
+
+.mobileContent {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none;
+	opacity: 1;
+	transform: translateY(0);
+	transition:
+		opacity var(--navbar-transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+		transform var(--navbar-transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: opacity, transform;
+}
+
+.mobileContent::-webkit-scrollbar {
+	display: none;
+}
+
+.mobileContent .logo {
+	padding: 15px 23px;
+}
+
+.mobileHidden {
+	opacity: 0;
+	transform: translateY(-6px);
+	pointer-events: none;
+}
+
+.mobileTopIcon {
+	display: block;
+	width: 15px;
+	height: 8px;
+	margin: 0 auto;
 }

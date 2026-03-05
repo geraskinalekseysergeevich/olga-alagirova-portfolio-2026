@@ -9,6 +9,20 @@
 	opacity: 0.5;
 }
 
+.casesWrap {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.25s ease;
+}
+
+.casesWrapOpen {
+	grid-template-rows: 1fr;
+}
+
+.casesInner {
+	overflow: hidden;
+}
+
 .cases {
 	display: flex;
 	flex-direction: column;
@@ -16,6 +30,22 @@
 	margin-top: 28px;
 }
 
-.rotated {
-	rotate: 180deg;
+.toggleButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.arrow {
+	display: block;
+	transition: transform 0.35s ease;
+}
+
+.arrowOpen {
+	transform: rotate(180deg);
 }

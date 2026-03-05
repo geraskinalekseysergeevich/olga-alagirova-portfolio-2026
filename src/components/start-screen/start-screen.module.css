@@ -1,0 +1,209 @@
+.container {
+	--design-width: 1440;
+	--design-height: 890;
+	--sticker-scale: 1;
+	position: relative;
+	isolation: isolate;
+	overflow: clip;
+	min-height: 100vh;
+	min-height: 100svh;
+	min-height: 100dvh;
+	margin-top: -30px;
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (max-width: 430px) {
+		padding-top: 0;
+	}
+}
+
+.stickersLayer {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.sticker {
+	position: absolute;
+	display: block;
+	user-select: none;
+	scale: var(--sticker-scale);
+	pointer-events: auto;
+}
+
+.content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.aplasticE {
+	top: calc((0 / var(--design-height)) * 100%);
+	left: calc((10 / var(--design-width)) * 100%);
+	transform-origin: left;
+}
+
+.aplasticPlanet {
+	top: calc((145 / var(--design-height)) * 100%);
+	left: calc((360 / var(--design-width)) * 100%);
+	transform-origin: right;
+}
+
+.aduney {
+	top: calc((155 / var(--design-height)) * 100%);
+	right: calc((30 / var(--design-width)) * 100%);
+	transform-origin: top right;
+}
+
+.earphone {
+	bottom: calc((110 / var(--design-height)) * 100%);
+	right: calc((195 / var(--design-width)) * 100%);
+	z-index: 2;
+	transform-origin: bottom right;
+}
+
+.hahnanagas {
+	top: calc((10 / var(--design-height)) * 100%);
+	right: calc((260 / var(--design-width)) * 100%);
+	transform-origin: right;
+}
+
+.molecule {
+	bottom: calc((70 / var(--design-height)) * 100%);
+	left: calc((720 / var(--design-width)) * 100%);
+	transform-origin: bottom left;
+}
+
+.skater {
+	bottom: calc((100 / var(--design-height)) * 100%);
+	right: calc((0 / var(--design-width)) * 100%);
+	transform-origin: bottom right;
+}
+
+.vkLightHand {
+	bottom: calc((90 / var(--design-height)) * 100%);
+	left: calc((10 / var(--design-width)) * 100%);
+	transform-origin: bottom left;
+}
+
+.vkLightMan {
+	bottom: calc((105 / var(--design-height)) * 100%);
+	left: calc((215 / var(--design-width)) * 100%);
+	transform-origin: bottom left;
+}
+
+@media (max-width: 640px) {
+	.hahnanagas,
+	.aduney,
+	.earphone {
+		display: none;
+	}
+
+	.sticker {
+		scale: 0.9;
+	}
+
+	.aplasticE {
+		top: -10px;
+		left: -10px;
+		scale: 0.8;
+	}
+
+	.aplasticPlanet {
+		top: calc((100 / 640) * 100%);
+		left: 50%;
+	}
+
+	.molecule {
+		top: calc((20 / 640) * 100%);
+		right: 0;
+		left: auto;
+		scale: 0.7;
+	}
+
+	.vkLightHand {
+		bottom: calc((100 / 640) * 100%);
+		left: 10px;
+		rotate: -10deg;
+		scale: 0.7;
+	}
+
+	.vkLightMan {
+		bottom: calc((50 / 640) * 100%);
+		left: calc((200 / 640) * 100%);
+		scale: 0.7;
+		rotate: -25deg;
+	}
+
+	.skater {
+		bottom: calc((125 / 640) * 100%);
+		right: -30px;
+		scale: 0.65;
+		rotate: -30deg;
+	}
+}
+
+@media (max-width: 580px) {
+	.aplasticPlanet {
+		top: calc((50 / 580) * 100%);
+		right: calc((30 / 580) * 100%);
+		left: auto;
+	}
+
+	.molecule {
+		right: calc((80 / 580) * 100%);
+		top: calc((0 / 580) * 100%);
+	}
+
+	.vkLightHand {
+		rotate: 0deg;
+		left: -25px;
+	}
+
+	.skater {
+		rotate: -5deg;
+		right: -20px;
+		bottom: 150px;
+		scale: 0.6;
+	}
+
+	.vkLightMan {
+		left: calc((240 / 640) * 100%);
+	}
+
+	@media (max-width: 430px) {
+		.aplasticPlanet {
+			top: calc((24 / 430) * 100%);
+			right: 4px;
+		}
+
+		.aplasticE {
+			top: -84px;
+			left: -10px;
+			scale: 0.7;
+		}
+
+		.vkLightHand {
+			scale: 0.6;
+			bottom: 155px;
+		}
+
+		.vkLightMan {
+			bottom: calc((20 / 430) * 100%);
+			left: 114px;
+		}
+
+		.molecule {
+			top: -75px;
+		}
+
+		.skater {
+			bottom: 109px;
+		}
+	}
+}

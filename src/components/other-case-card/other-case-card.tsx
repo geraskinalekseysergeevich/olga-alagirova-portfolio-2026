@@ -1,7 +1,7 @@
-import clsx from 'clsx'
-
-import { ImageGallery } from '../image-gallery/image-gallery'
+import { CustomButton } from '../custom-button/custom-button'
 import type { OtherCase } from '../other-cases/data'
+import { fixHangingPrepositions } from '../texts/fix-hanging-prepositions'
+import { BodyAccentText, BodyText } from '../texts/texts'
 import styles from './other-case-card.module.css'
 
 type OtherCaseCardProps = {
@@ -11,13 +11,16 @@ type OtherCaseCardProps = {
 export const OtherCaseCard = ({ otherCase }: OtherCaseCardProps) => {
 	return (
 		<div className={styles.card}>
-			<div className={styles.image}>
-				<ImageGallery imagesSrc={otherCase.imagesSrc} />
+			<div className={styles.imageWrap}>
+				<img src={otherCase.imageSrc} alt="Case preview" className={styles.image} />
 			</div>
 			<div className={styles.bottom}>
-				<p className={clsx('bodyAccent', styles.caseName)}>{otherCase.caseName}</p>
-				<h2>{otherCase.title}</h2>
-				<p className={clsx('body', styles.caseParagraph)}>{otherCase.paragraph}</p>
+				<div className={styles.texts}>
+					<BodyAccentText text={otherCase.caseName} customClass={styles.caseName} />
+					<h2>{fixHangingPrepositions(otherCase.title)}</h2>
+					<BodyText text={otherCase.paragraph} customClass={styles.caseParagraph} />
+				</div>
+				<CustomButton to={otherCase.link} text="Узнать больше" />
 			</div>
 		</div>
 	)

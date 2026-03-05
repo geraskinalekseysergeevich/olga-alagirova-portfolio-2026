@@ -1,20 +1,49 @@
 .container {
 	min-height: 100vh;
-	padding-top: 240px;
 	display: flex;
 	flex-direction: column;
-	gap: 150px;
+	gap: var(--gap-150);
 }
 
-.hero {
-	min-height: 58vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.scene {
+	position: relative;
+	isolation: isolate;
 }
 
-.aboutSection {
-	width: 100%;
+.startScreenSticky {
+	--start-screen-blur: 0px;
+	--start-screen-opacity: 1;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	filter: blur(var(--start-screen-blur));
+	opacity: var(--start-screen-opacity);
+	will-change: filter, opacity;
+}
+
+.aboutOverlay {
+	--about-overlay-gap: 500px;
+	position: relative;
+	z-index: 2;
+	margin-top: -28vh;
+	padding-top: calc(28vh + var(--about-overlay-gap));
+	pointer-events: none;
+
+	@media (max-width: 1200px) {
+		--about-overlay-gap: 400px;
+	}
+
+	@media (max-width: 1024px) {
+		--about-overlay-gap: 300px;
+	}
+
+	@media (max-width: 768px) {
+		--about-overlay-gap: 200px;
+	}
+}
+
+.aboutOverlay > * {
+	pointer-events: auto;
 }
 
 .container section[id] {
@@ -22,4 +51,22 @@
 	align-items: center;
 	justify-content: center;
 	scroll-margin-top: 140px;
+
+	@media (max-width: 430px) {
+		scroll-margin-top: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.aboutOverlay {
+		margin-top: -20vh;
+		padding-top: calc(20vh + var(--about-overlay-gap));
+	}
+}
+
+@media (max-width: 430px) {
+	.aboutOverlay {
+		margin-top: -14vh;
+		padding-top: calc(14vh + var(--about-overlay-gap));
+	}
 }

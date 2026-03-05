@@ -1,48 +1,50 @@
+import {
+	CASES_ROUTE,
+	EGGLESTON_ROUTE,
+	HAHNANAGAS_ROUTE,
+	SOFIA_SONECHKA_ROUTE,
+	VK_LIGHTS_ROUTE,
+} from '../../router/routes'
+
 export type OtherCase = {
-	imagesSrc: string[]
+	imageSrc: string
 	caseName: string
 	title: string
 	paragraph: string
+	link: string
 }
 
 export const OTHER_CASES: OtherCase[] = [
 	{
-		imagesSrc: [
-			'/cases/hahnanagas/1.jpg',
-			'/cases/hahnanagas/2.jpg',
-			'/cases/hahnanagas/3.jpg',
-			'/cases/hahnanagas/4.jpg',
-			'/cases/hahnanagas/5.jpg',
-		],
+		imageSrc: '/cases/vk-lights/preview.jpg',
+		caseName: 'VK Donut',
+		title: 'Редизайн сервиса донатов',
+		paragraph:
+			'Обновила айдентику для инструмента VK Donut, с помощью которого подписчики финансово поддерживают любимые сообщества. Проект занял первое место в конкурсе VK Designers.',
+		link: `${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`,
+	},
+	{
+		imageSrc: '/cases/hahnanagas/preview.jpg',
 		caseName: 'Ҳахьнанагаз',
 		title: 'Айдентика travel-шоу',
 		paragraph:
-			'Разработала визуальную концепцию шоу, а также анимационную заставку и шаблоны для социальных сетей. Первый выпуск уже на YouTube.',
+			'Разработала визуальную концепцию шоу, а также анимационную заставку и шаблоны для социальных сетей. Первый выпуск уже на YouTube.',
+		link: `${CASES_ROUTE}/${HAHNANAGAS_ROUTE}`,
 	},
 	{
-		imagesSrc: ['/cases/eggleston/1.jpg', '/cases/eggleston/2.jpg', '/cases/eggleston/3.jpg', '/cases/eggleston/4.jpg'],
+		imageSrc: '/cases/eggleston/preview.jpg',
 		caseName: 'I’m at war with the obvious: William Eggleston',
-		title: 'Концепция выставки и каталог',
+		title: 'Верстка каталога выставки',
 		paragraph:
 			'Разработала концепцию выставки и сверстала каталог. Идея основана на разделении работ фотографа по цветовым блокам, переходящим друг в друга.',
+		link: `${CASES_ROUTE}/${EGGLESTON_ROUTE}`,
 	},
 	{
-		imagesSrc: [
-			'/cases/sofia-sonechka/1.jpg',
-			'/cases/sofia-sonechka/2.jpg',
-			'/cases/sofia-sonechka/3.jpg',
-			'/cases/sofia-sonechka/4.jpg',
-		],
+		imageSrc: '/cases/sofia-sonechka/preview.jpg',
 		caseName: '«Софья/Сонечка» К. Поздеева',
 		title: 'Дизайн и верстка пьесы',
 		paragraph:
-			'Разработала макет, обложку и сверстала пьесу, посвященную становлению молодой женщины. Издан малый тираж. Проект участвовал в выставке «Продолжить просмотр» в галерее Artefice.',
-	},
-	{
-		imagesSrc: ['/cases/nornikel/1.jpg', '/cases/nornikel/2.jpg', '/cases/nornikel/3.jpg', '/cases/nornikel/4.jpg'],
-		caseName: 'Норникель',
-		title: 'Айдентика конференции',
-		paragraph:
-			'Вместо одного плаката для командного интерактива предложила айдентику мероприятия, чем увеличила объём проекта — дополнительно разработаны футболки, пакеты, торт и баннер. Конференцию посетили более 150 человек, более 90% из них участвовало в интерактиве, каждому вручили футолку.',
+			'Разработала макет, обложку и сверстала пьесу, посвященную становлению молодой женщины. Издан малый тираж. Проект был приглашен на выставку «Продолжить просмотр» в галерее Artefice.',
+		link: `${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`,
 	},
 ]

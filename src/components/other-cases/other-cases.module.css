@@ -1,12 +1,20 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	gap: 100px;
+	gap: var(--gap-100);
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	align-items: start;
-	gap: 100px 40px;
+	align-items: stretch;
+	gap: var(--gap-100) 40px;
+
+	@media (max-width: 1024px) {
+		column-gap: 30px;
+	}
+
+	@media (max-width: 640px) {
+		grid-template-columns: 1fr;
+	}
 }
