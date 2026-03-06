@@ -35,6 +35,7 @@
 	border-radius: 17px;
 	font-family: 'Inter', sans-serif;
 	background-color: color-mix(in srgb, var(--glass-color) 15%, transparent);
+	-webkit-backdrop-filter: blur(10px) saturate(125%);
 	backdrop-filter: blur(10px) url(#navbar-liquid) saturate(125%);
 	box-shadow:
 		inset 0 0 0 0.5px color-mix(in srgb, #ffffff calc(var(--glass-reflex-light) * 12%), transparent),
@@ -116,11 +117,16 @@
 	position: fixed;
 	left: 0;
 	right: 0;
-	bottom: 20px;
+	bottom: 10px;
+	bottom: calc(10px + env(safe-area-inset-bottom));
 	z-index: 1000;
 	display: none;
 	justify-content: center;
 	pointer-events: none;
+
+	@supports (bottom: calc(10px + constant(safe-area-inset-bottom))) {
+		bottom: calc(10px + constant(safe-area-inset-bottom));
+	}
 
 	@media (max-width: 640px) {
 		display: flex;
@@ -134,6 +140,18 @@
 	pointer-events: none;
 	background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 48%, transparent 100%);
 	z-index: 0;
+}
+
+.mobileNav {
+	box-shadow:
+		inset 0 0 0 0.5px color-mix(in srgb, #ffffff calc(var(--glass-reflex-light) * 12%), transparent),
+		inset 1.8px 3px 0 -2px color-mix(in srgb, #ffffff calc(var(--glass-reflex-light) * 90%), transparent),
+		inset -2px -2px 0 -2px color-mix(in srgb, #ffffff calc(var(--glass-reflex-light) * 80%), transparent),
+		inset -3px -8px 1px -6px color-mix(in srgb, #ffffff calc(var(--glass-reflex-light) * 60%), transparent),
+		inset -0.3px -1px 4px 0 color-mix(in srgb, #000000 calc(var(--glass-reflex-dark) * 12%), transparent),
+		inset -1.5px 2.5px 0 -2px color-mix(in srgb, #000000 calc(var(--glass-reflex-dark) * 20%), transparent),
+		inset 0 3px 4px -2px color-mix(in srgb, #000000 calc(var(--glass-reflex-dark) * 20%), transparent),
+		inset 2px -6.5px 1px -4px color-mix(in srgb, #000000 calc(var(--glass-reflex-dark) * 10%), transparent);
 }
 
 .mobileContent {
@@ -158,6 +176,13 @@
 }
 
 .mobileContent .logo {
+	padding: 0;
+}
+
+.mobileContent .logoButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 15px 23px;
 }
 
@@ -172,4 +197,18 @@
 	width: 15px;
 	height: 8px;
 	margin: 0 auto;
+}
+
+:global(html.safari-glass-fallback) .nav,
+:global(html.safari-glass-fallback) .mobileNav {
+	background-color: rgba(223, 223, 225, 0.84) !important;
+	-webkit-backdrop-filter: none !important;
+	backdrop-filter: none !important;
+	box-shadow:
+		inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+		0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+:global(html.safari-glass-fallback) .mobileNav {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
 }

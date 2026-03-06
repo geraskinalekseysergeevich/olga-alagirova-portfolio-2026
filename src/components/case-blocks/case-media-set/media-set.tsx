@@ -1,3 +1,4 @@
+import { resolvePublicAssetUrl } from '../../../utils/resolve-public-asset-url'
 import { CaseVideo } from '../case-video/video'
 import styles from './media-set.module.css'
 
@@ -19,7 +20,7 @@ export const CaseMediaSet = ({ anchorId, imagesSrc }: CaseMediaSetProps) => {
 					isVideoSrc(src) ? (
 						<CaseVideo key={index} src={src} />
 					) : (
-						<img key={index} src={src} alt="Project Image" className={styles.image} />
+						<img key={index} src={resolvePublicAssetUrl(src)} alt="Project Image" className={styles.image} />
 					),
 				)}
 			</div>

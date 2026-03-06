@@ -1,4 +1,4 @@
-import type { FullTextList } from '../../../pages/cv/data'
+import type { FullTextList } from '../../../pages/cv/data-types'
 import { BodyText } from '../../texts/texts'
 import styles from './bullets-block.module.css'
 

@@ -13,8 +13,7 @@ const ABOUT_CARDS_ANIMATION_CONFIG = {
 	scaleEnd: 'bottom 60%',
 	pinStart: 'bottom 60%',
 	minScale: 0.8,
-	scrub: 0.5,
-	equalizeHeights: true,
+	scrub: true,
 } as const
 
 export const AboutCards = () => {
@@ -51,12 +50,9 @@ export const AboutCards = () => {
 
 		const gsapContext = gsap.context(() => {
 			const lastCardIndex = cards.length - 1
-			const lastCardPinBoundary = ScrollTrigger.create({
-				trigger: cards[lastCardIndex],
-				start: ABOUT_CARDS_ANIMATION_CONFIG.pinStart,
-			})
+			const lastCard = cards[lastCardIndex]
 
-			cards.forEach((card) => {
+			cards.forEach((card, index) => {
 				const scaleTween = gsap.to(card, {
 					scale: ABOUT_CARDS_ANIMATION_CONFIG.minScale,
 					ease: 'none',
@@ -71,16 +67,19 @@ export const AboutCards = () => {
 					invalidateOnRefresh: true,
 				})
 
+				if (index === lastCardIndex) {
+					return
+				}
+
 				ScrollTrigger.create({
 					trigger: card,
 					start: ABOUT_CARDS_ANIMATION_CONFIG.pinStart,
-					end: () => lastCardPinBoundary.start,
+					endTrigger: lastCard,
+					end: ABOUT_CARDS_ANIMATION_CONFIG.pinStart,
 					pin: true,
 					pinSpacing: false,
 					invalidateOnRefresh: true,
 				})
-
-				return
 			})
 
 			ScrollTrigger.refresh()

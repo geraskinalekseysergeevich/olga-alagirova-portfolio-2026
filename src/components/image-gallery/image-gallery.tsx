@@ -1,5 +1,6 @@
 import { type MouseEvent, useEffect, useState } from 'react'
 
+import { resolvePublicAssetUrl } from '../../utils/resolve-public-asset-url'
 import styles from './image-gallery.module.css'
 
 type ImageGalleryProps = {
@@ -53,7 +54,7 @@ export const ImageGallery = ({ imagesSrc, autoSlideMs = 4000, altPrefix = 'Galle
 					<div className={styles.slide} key={`${src}-${index}`}>
 						<img
 							className={styles.image}
-							src={src}
+							src={resolvePublicAssetUrl(src)}
 							alt={`${altPrefix} ${index + 1}`}
 							loading={index === 0 ? 'eager' : 'lazy'}
 						/>
