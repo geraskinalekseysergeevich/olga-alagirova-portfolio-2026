@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 
+import { fixHangingPrepositions } from '../../texts/fix-hanging-prepositions'
 import { BodyText } from '../../texts/texts'
 import styles from './about-card.module.css'
 
@@ -15,7 +16,7 @@ export const AboutCard = ({ text, caption, variant }: AboutCardProps) => {
 			className={clsx(styles.card, variant === 'gray' && styles.cardGray, variant === 'black' && styles.cardBlack)}
 			data-about-card
 		>
-			<h2>{text}</h2>
+			<h2>{fixHangingPrepositions(text)}</h2>
 			<BodyText text={caption} />
 		</article>
 	)
