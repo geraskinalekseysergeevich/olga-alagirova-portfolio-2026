@@ -60,7 +60,7 @@ export const MainPage = () => {
 				ease: 'none',
 				scrollTrigger: {
 					trigger: aboutSectionElement,
-					start: 'top 65%',
+					start: 'top 100%',
 					end: 'bottom bottom',
 					scrub: 0.6,
 					invalidateOnRefresh: true,
