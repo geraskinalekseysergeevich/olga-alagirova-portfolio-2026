@@ -1,5 +1,14 @@
 const ABSOLUTE_URL_PATTERN = /^[a-z][a-z\d+\-.]*:/i
 
+const normalizeBasePath = (basePath?: string) => {
+	if (!basePath || basePath === '/' || basePath === '.' || basePath === './') {
+		return '/'
+	}
+
+	const prefixedBasePath = basePath.startsWith('/') ? basePath : `/${basePath}`
+	return prefixedBasePath.endsWith('/') ? prefixedBasePath : `${prefixedBasePath}/`
+}
+
 export const resolvePublicAssetUrl = (src: string) => {
 	if (!src) {
 		return src
@@ -13,17 +22,11 @@ export const resolvePublicAssetUrl = (src: string) => {
 		return src
 	}
 
-	const baseUrl = import.meta.env.BASE_URL || '/'
+	const basePath = normalizeBasePath(import.meta.env.BASE_URL)
 
-	if (baseUrl === '/') {
+	if (basePath === '/' || src.startsWith(basePath)) {
 		return src
 	}
 
-	const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
-
-	if (src.startsWith(normalizedBaseUrl)) {
-		return src
-	}
-
-	return `${normalizedBaseUrl}${src.slice(1)}`
+	return `${basePath}${src.slice(1)}`
 }

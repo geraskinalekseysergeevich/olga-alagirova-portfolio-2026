@@ -23,68 +23,63 @@ import {
 	VK_LIGHTS_ROUTE,
 } from './routes'
 
-const basename = typeof window === 'undefined' ? undefined : window.__APP_BASENAME__
-
-export const router = createBrowserRouter(
-	[
-		{
-			element: <Layout />,
-			children: [
-				{
-					path: MAIN_ROUTE,
-					element: <MainPage />,
-				},
-				{
-					path: CV_ROUTE,
-					element: <CvPage />,
-				},
-				{
-					path: CASES_ROUTE,
-					children: [
-						{
-							index: true,
-							element: <Navigate replace to={MAIN_ROUTE} />,
-						},
-						{
-							path: APLASTIC_ROUTE,
-							element: <AplasticPage />,
-						},
-						{
-							path: SBER_SELLER_ROUTE,
-							element: <SberSellerPage />,
-						},
-						{
-							path: GKB_DAVYDOVSKY_ROUTE,
-							element: <GkbDavydovskyPage />,
-						},
-						{
-							path: VK_LIGHTS_ROUTE,
-							element: <VkLightsPage />,
-						},
-						{
-							path: HAHNANAGAS_ROUTE,
-							element: <HahnanagasPage />,
-						},
-						{
-							path: EGGLESTON_ROUTE,
-							element: <EgglestonPage />,
-						},
-						{
-							path: SOFIA_SONECHKA_ROUTE,
-							element: <SofiaSonechkaPage />,
-						},
-						{
-							path: '*',
-							element: <Navigate replace to={MAIN_ROUTE} />,
-						},
-					],
-				},
-				{
-					path: '*',
-					element: <Navigate replace to={MAIN_ROUTE} />,
-				},
-			],
-		},
-	],
-	{ basename },
-)
+export const router = createBrowserRouter([
+	{
+		element: <Layout />,
+		children: [
+			{
+				path: MAIN_ROUTE,
+				element: <MainPage />,
+			},
+			{
+				path: CV_ROUTE,
+				element: <CvPage />,
+			},
+			{
+				path: CASES_ROUTE,
+				children: [
+					{
+						index: true,
+						element: <Navigate replace to={MAIN_ROUTE} />,
+					},
+					{
+						path: APLASTIC_ROUTE,
+						element: <AplasticPage />,
+					},
+					{
+						path: SBER_SELLER_ROUTE,
+						element: <SberSellerPage />,
+					},
+					{
+						path: GKB_DAVYDOVSKY_ROUTE,
+						element: <GkbDavydovskyPage />,
+					},
+					{
+						path: VK_LIGHTS_ROUTE,
+						element: <VkLightsPage />,
+					},
+					{
+						path: HAHNANAGAS_ROUTE,
+						element: <HahnanagasPage />,
+					},
+					{
+						path: EGGLESTON_ROUTE,
+						element: <EgglestonPage />,
+					},
+					{
+						path: SOFIA_SONECHKA_ROUTE,
+						element: <SofiaSonechkaPage />,
+					},
+					{
+						path: '*',
+						element: <Navigate replace to={MAIN_ROUTE} />,
+					},
+				],
+			},
+			{
+				path: '*',
+				element: <Navigate replace to={MAIN_ROUTE} />,
+			},
+		],
+	},
+])
