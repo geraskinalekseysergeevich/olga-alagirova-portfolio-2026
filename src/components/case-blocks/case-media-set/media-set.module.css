@@ -4,7 +4,16 @@
 	gap: var(--gap-20);
 }
 
+.picture {
+	display: block;
+	width: 100%;
+	line-height: 0;
+}
+
 .image {
+	display: block;
+	width: 100%;
+	height: auto;
 	border-radius: 15px;
 
 	@media (max-width: 1200px) {

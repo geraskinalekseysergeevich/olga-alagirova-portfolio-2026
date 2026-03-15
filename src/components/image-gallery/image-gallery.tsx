@@ -1,6 +1,6 @@
 import { type MouseEvent, useEffect, useState } from 'react'
 
-import { resolvePublicAssetUrl } from '../../utils/resolve-public-asset-url'
+import { resolvePublicAssetUrl, resolvePublicWebpAssetUrl } from '../../utils/resolve-public-asset-url'
 import styles from './image-gallery.module.css'
 
 type ImageGalleryProps = {
@@ -50,16 +50,23 @@ export const ImageGallery = ({ imagesSrc, autoSlideMs = 4000, altPrefix = 'Galle
 	return (
 		<div className={styles.container}>
 			<div className={styles.track} style={{ transform: `translateX(-${safeActiveIndex * 100}%)` }}>
-				{imagesSrc.map((src, index) => (
-					<div className={styles.slide} key={`${src}-${index}`}>
-						<img
-							className={styles.image}
-							src={resolvePublicAssetUrl(src)}
-							alt={`${altPrefix} ${index + 1}`}
-							loading={index === 0 ? 'eager' : 'lazy'}
-						/>
-					</div>
-				))}
+				{imagesSrc.map((src, index) => {
+					const webpSrc = resolvePublicWebpAssetUrl(src)
+
+					return (
+						<div className={styles.slide} key={`${src}-${index}`}>
+							<picture className={styles.picture}>
+								{webpSrc ? <source srcSet={webpSrc} type="image/webp" /> : null}
+								<img
+									className={styles.image}
+									src={resolvePublicAssetUrl(src)}
+									alt={`${altPrefix} ${index + 1}`}
+									loading={index === 0 ? 'eager' : 'lazy'}
+								/>
+							</picture>
+						</div>
+					)
+				})}
 			</div>
 			{imagesSrc.length > 1 ? (
 				<div className={styles.dots}>
