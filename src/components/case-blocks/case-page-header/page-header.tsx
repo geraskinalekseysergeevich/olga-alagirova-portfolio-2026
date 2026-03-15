@@ -11,7 +11,7 @@ export const CasePageHeader = ({ texts, imgSrc }: CasePageHeaderProps) => {
 	return (
 		<div className={styles.container}>
 			<Title texts={texts} />
-			<CaseMediaSet imagesSrc={[imgSrc]} priority />
+			<CaseMediaSet imagesSrc={[imgSrc]} />
 		</div>
 	)
 }
