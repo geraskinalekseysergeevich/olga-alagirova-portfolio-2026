@@ -1,4 +1,4 @@
-import { createHashRouter, Navigate } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 import { Layout } from '../components/layout/layout'
 import { AplasticPage } from '../pages/cases/aplastic/aplastic'
@@ -23,7 +23,7 @@ import {
 	VK_LIGHTS_ROUTE,
 } from './routes'
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
 	{
 		element: <Layout />,
 		children: [

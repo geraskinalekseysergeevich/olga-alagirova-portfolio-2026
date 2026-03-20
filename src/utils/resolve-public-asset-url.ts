@@ -1,4 +1,14 @@
 const ABSOLUTE_URL_PATTERN = /^[a-z][a-z\d+\-.]*:/i
+const WEBP_SOURCE_EXT_PATTERN = /\.(jpe?g|png)$/i
+
+const normalizeBasePath = (basePath?: string) => {
+	if (!basePath || basePath === '/' || basePath === '.' || basePath === './') {
+		return '/'
+	}
+
+	const prefixedBasePath = basePath.startsWith('/') ? basePath : `/${basePath}`
+	return prefixedBasePath.endsWith('/') ? prefixedBasePath : `${prefixedBasePath}/`
+}
 
 export const resolvePublicAssetUrl = (src: string) => {
 	if (!src) {
@@ -13,17 +23,29 @@ export const resolvePublicAssetUrl = (src: string) => {
 		return src
 	}
 
-	const baseUrl = import.meta.env.BASE_URL || '/'
+	const basePath = normalizeBasePath(import.meta.env.BASE_URL)
 
-	if (baseUrl === '/') {
+	if (basePath === '/' || src.startsWith(basePath)) {
 		return src
 	}
 
-	const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
+	return `${basePath}${src.slice(1)}`
+}
 
-	if (src.startsWith(normalizedBaseUrl)) {
-		return src
+export const resolvePublicWebpAssetUrl = (src: string) => {
+	const resolvedSrc = resolvePublicAssetUrl(src)
+	const match = resolvedSrc.match(/^([^?#]+)(.*)$/)
+
+	if (!match) {
+		return null
 	}
 
-	return `${normalizedBaseUrl}${src.slice(1)}`
+	const pathPart = match[1]
+	const suffixPart = match[2] ?? ''
+
+	if (!pathPart || !WEBP_SOURCE_EXT_PATTERN.test(pathPart)) {
+		return null
+	}
+
+	return `${pathPart.replace(WEBP_SOURCE_EXT_PATTERN, '.webp')}${suffixPart}`
 }
