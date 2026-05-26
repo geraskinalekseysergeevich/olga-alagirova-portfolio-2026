@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 import { Layout } from '../components/layout/layout'
+import { TwelveStoreezPage } from '../pages/cases/12storeez/12storeez'
 import { AplasticPage } from '../pages/cases/aplastic/aplastic'
 import { EgglestonPage } from '../pages/cases/eggleston/eggleston'
 import { GkbDavydovskyPage } from '../pages/cases/gkb-davydovsky/gkb-davydovsky'
@@ -8,6 +9,7 @@ import { HahnanagasPage } from '../pages/cases/hahnanagas/hahnanagas'
 import { SberSellerPage } from '../pages/cases/sber-seller/sber-seller'
 import { SofiaSonechkaPage } from '../pages/cases/sofia-sonechka/sofia-sonechka'
 import { VkLightsPage } from '../pages/cases/vk-lights/vk-lights'
+import { YandexRentPage } from '../pages/cases/yandex-rent/yandex-rent'
 import { CvPage } from '../pages/cv/cv'
 import { MainPage } from '../pages/main/main'
 import {
@@ -20,7 +22,9 @@ import {
 	MAIN_ROUTE,
 	SBER_SELLER_ROUTE,
 	SOFIA_SONECHKA_ROUTE,
+	TWELVE_STOREEZ_ROUTE,
 	VK_LIGHTS_ROUTE,
+	YANDEX_RENT_ROUTE,
 } from './routes'
 
 export const router = createBrowserRouter([
@@ -47,6 +51,10 @@ export const router = createBrowserRouter([
 						element: <AplasticPage />,
 					},
 					{
+						path: TWELVE_STOREEZ_ROUTE,
+						element: <TwelveStoreezPage />,
+					},
+					{
 						path: SBER_SELLER_ROUTE,
 						element: <SberSellerPage />,
 					},
@@ -69,6 +77,10 @@ export const router = createBrowserRouter([
 					{
 						path: SOFIA_SONECHKA_ROUTE,
 						element: <SofiaSonechkaPage />,
+					},
+					{
+						path: YANDEX_RENT_ROUTE,
+						element: <YandexRentPage />,
 					},
 					{
 						path: '*',
