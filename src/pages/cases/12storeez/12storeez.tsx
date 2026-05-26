@@ -38,10 +38,16 @@ export const TwelveStoreezPage = () => {
 				paragraph="«Эта история создавалась 12 лет — слой за слоем, не спеша, с вниманием к каждому шагу. Внутри — процесс изготовления нашего изделия: от первой мысли до момента, когда оно оказывается в ваших руках. В этом пути нет случайных деталей, только внимание и время. Мы оттачиваем мастерство с мыслью о вас — надеясь, что наше изделие станет частью вашей жизни»."
 			/>
 			<CaseMediaSet imagesSrc={['/cases/12storeez/7.jpg', '/cases/12storeez/8.jpg']} />
-			<section id={TwelveStoreezAnchorId.TEAM}>
-				<CaseFooter title="Команда проекта" paragraph="Арт-директор / дизайнер — Ольга Алагирова" year="2026" />
-			</section>
-			<CaseListButtons previous={`${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`} next={`${CASES_ROUTE}/${YANDEX_RENT_ROUTE}`} />
+			<CaseFooter
+				anchorId={TwelveStoreezAnchorId.TEAM}
+				title="Команда проекта"
+				paragraph="Арт-директор / дизайнер — Ольга Алагирова"
+				year="2026"
+			/>
+			<CaseListButtons
+				previous={`${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`}
+				next={`${CASES_ROUTE}/${YANDEX_RENT_ROUTE}`}
+			/>
 		</CasePageTemplate>
 	)
 }
