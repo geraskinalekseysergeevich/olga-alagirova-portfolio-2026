@@ -3,7 +3,9 @@ import {
 	EGGLESTON_ROUTE,
 	HAHNANAGAS_ROUTE,
 	SOFIA_SONECHKA_ROUTE,
+	TWELVE_STOREEZ_ROUTE,
 	VK_LIGHTS_ROUTE,
+	YANDEX_RENT_ROUTE,
 } from '../../router/routes'
 
 export type OtherCase = {
@@ -46,5 +48,21 @@ export const OTHER_CASES: OtherCase[] = [
 		paragraph:
 			'Разработала макет, обложку и сверстала пьесу, посвященную становлению молодой женщины. Издан малый тираж. Проект был приглашен на выставку «Продолжить просмотр» в галерее Artefice.',
 		link: `${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`,
+	},
+	{
+		imageSrc: '/cases/12storeez/preview.jpg',
+		caseName: '12Storeez',
+		title: 'Дизайн PR-рассылки и витрины',
+		paragraph:
+			'Разработала концепцию и дизайн PR-рассылки и витрины с «вау» эффектом по случаю Дня Рождения — двенадцатилетия бренда 12storeez.',
+		link: `${CASES_ROUTE}/${TWELVE_STOREEZ_ROUTE}`,
+	},
+	{
+		imageSrc: '/cases/yandex-rent/preview.jpg',
+		caseName: 'Яндекс Аренда',
+		title: 'Редизайн лендинга',
+		paragraph:
+			'Обновила лендинг «Плюсы сдачи квартиры через Аренду», усиливав ощущение принадлежности к бренду. Улучшила коммуникацию и логику повествования.',
+		link: `${CASES_ROUTE}/${YANDEX_RENT_ROUTE}`,
 	},
 ]
