@@ -25,7 +25,7 @@ const NAVBAR_LAYOUT_CONFIG = {
 const DEFAULT_NAVBAR_CONFIG: NavbarConfig = {
 	anchors: [
 		{ label: 'Main Cases', to: '/#main-cases' },
-		{ label: 'Typography & Others', to: '/#typography-others' },
+		{ label: 'Others', to: '/#typography-others' },
 		{ label: 'Contacts', to: '/#contacts' },
 	],
 	pageLinks: [{ label: 'CV', to: CV_ROUTE, theme: 'dark' }],

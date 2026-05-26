@@ -6,7 +6,7 @@ import styles from './other-cases.module.css'
 export const OtherCases = () => {
 	return (
 		<div className={styles.container}>
-			<Title texts={['Typography & Others']} />
+			<Title texts={['Others']} />
 			<div className={styles.grid}>
 				{OTHER_CASES.map((item, index) => (
 					<OtherCaseCard key={index} otherCase={item} />
