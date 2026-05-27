@@ -23,13 +23,6 @@
 	overflow: hidden;
 }
 
-.cases {
-	display: flex;
-	flex-direction: column;
-	gap: 38px;
-	margin-top: 28px;
-}
-
 .toggleButton {
 	display: inline-flex;
 	align-items: center;

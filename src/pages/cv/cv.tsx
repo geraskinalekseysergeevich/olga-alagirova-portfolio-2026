@@ -1,11 +1,12 @@
 import { AvatarComposition } from '../../components/avatar-composition/avatar-composition'
 import { Contacts } from '../../components/contacts/contacts'
+import { BulletsBlock } from '../../components/dropdown-block/bullets-block/bullets-block'
 import { DropdownBlock } from '../../components/dropdown-block/dropdown-block'
 import { BodyAccentText, BodyText } from '../../components/texts/texts'
 import { Title } from '../../components/title/title'
 import { useHashScroll } from '../../hooks/use-hash-scroll'
 import styles from './cv.module.css'
-import { EDUCATION_CASES, MAIN_PROJECT_CASES, WORK_EXPERIENCE_CASES } from './data'
+import { ADDITIONAL_SECTIONS, EDUCATION_CASES, SKILL_SECTIONS, WORK_EXPERIENCE_CASES } from './data'
 
 export const CvPage = () => {
 	useHashScroll()
@@ -18,38 +19,32 @@ export const CvPage = () => {
 			</div>
 			<div className={styles.content}>
 				<div className={styles.info}>
-					<BodyText text="Коммуникационный и бренд-дизайнер из Москвы с опытом работы в агентской среде и на крупных бренд-проектах. Последовательно выросла до страшего дизайнера, отвечаю за визуальные системы от концепции и бренд-стратегии до внедрения в digital, печать и коммуникации." />
-					<BodyText text="Имею опыт арт-дирекшена, прямого взаимодействия с клиентами и курирования подрядчиков (3D, motion, разработка). Ищу позицию в найме с фокусом на долгосрочную работу с брендом и командой." />
-				</div>
-				<div className={styles.workExperience}>
-					<p className="bodyAccent">Опыт работы</p>
-					{WORK_EXPERIENCE_CASES.map((workCase, index) => (
-						<DropdownBlock key={index} cvCase={workCase} />
-					))}
-				</div>
-				<div className={styles.mainProjects}>
-					<p className="bodyAccent">Ключевые проекты (параллельно с агентской работой)</p>
-					{MAIN_PROJECT_CASES.map((mainCase, index) => (
-						<DropdownBlock key={index} cvCase={mainCase} />
-					))}
+					<BodyText text="Дизайнер и арт-директор с опытом более 4 лет в разработке креативных концепций, бренд-айдентики и digital-дизайне. Работала с крупными клиентами и запускала проект для аудиторий 100К+ пользователей." />
+					<BodyText text="Сильные стороны: связывать креативные решения с целями бизнеса, выстраивать дизайн-процессы, общаться со стейкхолдерами и командой." />
 				</div>
 				<div className={styles.education}>
-					<p className="bodyAccent">Образование</p>
+					<BodyAccentText text="Образование" />
 					{EDUCATION_CASES.map((educationCase, index) => (
 						<DropdownBlock key={index} cvCase={educationCase} />
 					))}
 				</div>
+				<div className={styles.workExperience}>
+					<BodyAccentText text="Опыт работы" />
+					{WORK_EXPERIENCE_CASES.map((workCase, index) => (
+						<DropdownBlock key={index} cvCase={workCase} />
+					))}
+				</div>
 				<div className={styles.skills}>
 					<BodyAccentText text="Навыки" />
-					<BodyText text="Ai, Ps, Indd, Figma, понимание motion&3D, работа с ИИ" />
-					<BodyText
-						text="Cистемное и логичное мышление
-              Автономность и ответственность за результат
-              Презентация и навык деловой переписки
-              Инициативность, умение брать на себя дополнительную ответственность
-              Внимание к деталям"
-					/>
-					<BodyText text="И главное — хорошее чувство юмора!" />
+					{SKILL_SECTIONS.map((section, index) => (
+						<BulletsBlock key={index} bullets={section} />
+					))}
+				</div>
+				<div className={styles.additional}>
+					<BodyAccentText text="Дополнительно" />
+					{ADDITIONAL_SECTIONS.map((section, index) => (
+						<BulletsBlock key={index} bullets={section} />
+					))}
 				</div>
 			</div>
 			<section className={styles.contactsSection} id="contacts">

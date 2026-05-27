@@ -1,13 +1,8 @@
-export type FullTextList = {
-	title?: string
-	bullets: string[]
-}
-
 export type BasicCase = {
 	title: string
 	role: string
-	previewText: string
-	fullText?: FullTextList[]
+	previewText?: string
+	fullText?: string[]
 }
 
 export type WorkExperienceCase = BasicCase
