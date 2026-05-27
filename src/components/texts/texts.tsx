@@ -1,10 +1,12 @@
 import clsx from 'clsx'
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
+import type { RichTextPart, TextContent } from '../../pages/cv/data-types'
 import { fixHangingPrepositions } from './fix-hanging-prepositions'
 
 type TextProps = {
-	text: string
+	text: TextContent
 	customClass?: string
 }
 
@@ -45,6 +47,12 @@ const normalizeLeadingIndent = (line: string) => {
 	return `${visualIndent}${fixedContent}`
 }
 
+const inlineLinkStyle = {
+	color: 'inherit',
+	textDecoration: 'underline',
+	textUnderlineOffset: '0.12em',
+} as const
+
 const renderText = (text: string) => {
 	const lines = dedentMultilineText(text)
 
@@ -56,10 +64,40 @@ const renderText = (text: string) => {
 	))
 }
 
+const renderRichText = (content: RichTextPart[]) => {
+	return content.map((part, index) => {
+		if (typeof part === 'string') {
+			return <Fragment key={`part-${index}`}>{fixHangingPrepositions(part)}</Fragment>
+		}
+
+		if (part.external) {
+			return (
+				<a key={`part-${index}`} href={part.to} rel="noopener noreferrer" style={inlineLinkStyle} target="_blank">
+					{fixHangingPrepositions(part.text)}
+				</a>
+			)
+		}
+
+		return (
+			<Link key={`part-${index}`} rel="noopener noreferrer" style={inlineLinkStyle} target="_blank" to={part.to}>
+				{fixHangingPrepositions(part.text)}
+			</Link>
+		)
+	})
+}
+
+const renderContent = (text: TextContent) => {
+	if (typeof text === 'string') {
+		return renderText(text)
+	}
+
+	return renderRichText(text)
+}
+
 export const BodyText = ({ text, customClass }: TextProps) => {
-	return <p className={clsx('body', customClass)}>{renderText(text)}</p>
+	return <p className={clsx('body', customClass)}>{renderContent(text)}</p>
 }
 
 export const BodyAccentText = ({ text, customClass }: TextProps) => {
-	return <p className={clsx('bodyAccent', customClass)}>{renderText(text)}</p>
+	return <p className={clsx('bodyAccent', customClass)}>{renderContent(text)}</p>
 }

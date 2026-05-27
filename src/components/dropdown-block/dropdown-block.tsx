@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { useState } from 'react'
 
 import ArrowIcon from '../../assets/icons/bottom-arrow.svg'
-import type { CvCase, FullTextList } from '../../pages/cv/data-types'
+import type { CvCase } from '../../pages/cv/data-types'
 import { BodyText } from '../texts/texts'
 import { BulletsBlock } from './bullets-block/bullets-block'
 import styles from './dropdown-block.module.css'
@@ -19,16 +19,12 @@ export const DropdownBlock = ({ cvCase }: DropdownBlockProps) => {
 		<div className={styles.container}>
 			<BodyText text={cvCase.title} />
 			<BodyText text={cvCase.role} customClass={styles.role} />
-			<BodyText text={cvCase.previewText} />
+			{cvCase.previewText && <BodyText text={cvCase.previewText} />}
 
 			{hasFullText && (
 				<div className={clsx(styles.casesWrap, isOpen && styles.casesWrapOpen)} aria-hidden={!isOpen}>
 					<div className={styles.casesInner}>
-						<div className={styles.cases}>
-							{cvCase.fullText?.map((item: FullTextList, index) => (
-								<BulletsBlock key={index} fullText={item} />
-							))}
-						</div>
+						<BulletsBlock bullets={cvCase.fullText ?? []} />
 					</div>
 				</div>
 			)}

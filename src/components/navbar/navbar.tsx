@@ -24,8 +24,8 @@ const NAVBAR_LAYOUT_CONFIG = {
 
 const DEFAULT_NAVBAR_CONFIG: NavbarConfig = {
 	anchors: [
-		{ label: 'Brand Cases', to: '/#brand-cases' },
-		{ label: 'Typography & Others', to: '/#typography-others' },
+		{ label: 'Main Cases', to: '/#main-cases' },
+		{ label: 'Others', to: '/#typography-others' },
 		{ label: 'Contacts', to: '/#contacts' },
 	],
 	pageLinks: [{ label: 'CV', to: CV_ROUTE, theme: 'dark' }],
@@ -145,7 +145,6 @@ export const Navbar = () => {
 	const currentMobileConfig = resolveNavbarConfig(configPathname)
 	const mobileAnchors = currentMobileConfig.anchors
 		.filter((item) => item.to !== '/#typography-others')
-		.map((item) => (item.to === '/#brand-cases' ? { ...item, label: 'Cases' } : item))
 	const navWidth = contentWidth ? `${contentWidth}px` : undefined
 	const navStyle = {
 		width: navWidth,

@@ -103,7 +103,7 @@ export const MainPage = () => {
 					<AboutCards />
 				</section>
 			</div>
-			<section id="brand-cases">
+			<section id="main-cases">
 				<BrandCases />
 			</section>
 			<section id="typography-others">

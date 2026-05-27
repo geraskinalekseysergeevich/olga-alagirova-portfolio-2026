@@ -26,7 +26,7 @@ export const Contacts = () => {
 					</div>
 				</div>
 				<div className={clsx(styles.column, styles.right)}>
-					<h2>Если хочешь вместе работать — свяжись со мной прямо сейчас!</h2>
+					<h2>Если хочешь вместе работать — свяжись со мной</h2>
 					<CustomButton openInNewTab to={'https://t.me/alagirovva'} text="Написать в Telegram" />
 				</div>
 			</div>

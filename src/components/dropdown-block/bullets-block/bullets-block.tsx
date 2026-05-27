@@ -1,22 +1,21 @@
-import type { FullTextList } from '../../../pages/cv/data-types'
+import type { TextContent } from '../../../pages/cv/data-types'
 import { BodyText } from '../../texts/texts'
 import styles from './bullets-block.module.css'
 
 type BulletsBlockProps = {
-	fullText: FullTextList
+	bullets: TextContent[]
 }
 
-export const BulletsBlock = ({ fullText }: BulletsBlockProps) => {
+export const BulletsBlock = ({ bullets }: BulletsBlockProps) => {
 	return (
 		<div className={styles.container}>
-			{fullText.title && <BodyText text={fullText.title} />}
-			<div className={styles.bullets}>
-				{fullText.bullets.map((item, index) => (
-					<li key={index} className={styles.bullet}>
+			<ul className={styles.bullets}>
+				{bullets.map((item, index) => (
+					<li key={index}>
 						<BodyText text={item} />
 					</li>
 				))}
-			</div>
+			</ul>
 		</div>
 	)
 }

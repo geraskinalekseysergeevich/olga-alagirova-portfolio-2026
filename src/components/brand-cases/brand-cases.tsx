@@ -6,7 +6,7 @@ import { BRAND_CASES } from './data'
 export const BrandCases = () => {
 	return (
 		<div className={styles.container}>
-			<Title texts={['Brand Cases']} />
+			<Title texts={['Main Cases']} />
 			<div className={styles.cases}>
 				{BRAND_CASES.map((item, index) => (
 					<BrandCaseCard key={index} brandCase={item} />
