@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { APLASTIC_ROUTE, CASES_ROUTE, TWELVE_STOREEZ_ROUTE } from '../../../router/routes'
+import { APLASTIC_ROUTE, CASES_ROUTE, EGGLESTON_ROUTE } from '../../../router/routes'
 import { SOFIA_SONECHKA_ANCHORS, SofiaSonechkaAnchorId } from './anchors'
 
 export const SofiaSonechkaPage = () => {
@@ -45,7 +45,7 @@ export const SofiaSonechkaPage = () => {
 				paragraph="Книга издана малым тиражом. В сентябре 2024 года была приглашена на выставку «Продолжить просмотр» в галерее Галерея Artefice в Санкт-Петербурге."
 			/>
 			<CaseFooter title="Команда проекта" paragraph="Концепция и дизайн — Ольга Алагирова" year="2024" />
-			<CaseListButtons previous={`${CASES_ROUTE}/${APLASTIC_ROUTE}`} next={`${CASES_ROUTE}/${TWELVE_STOREEZ_ROUTE}`} />
+			<CaseListButtons previous={`${CASES_ROUTE}/${EGGLESTON_ROUTE}`} next={`${CASES_ROUTE}/${APLASTIC_ROUTE}`} />
 		</CasePageTemplate>
 	)
 }

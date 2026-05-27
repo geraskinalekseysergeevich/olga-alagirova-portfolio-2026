@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { CASES_ROUTE, SBER_SELLER_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, SBER_SELLER_ROUTE, TWELVE_STOREEZ_ROUTE } from '../../../router/routes'
 import { GKB_DAVYDOVSKY_ANCHORS, GkbDavydovskyAnchorId } from './anchors'
 
 export const GkbDavydovskyPage = () => {
@@ -64,7 +64,7 @@ export const GkbDavydovskyPage = () => {
 				Арт-дирекшн и дизайн — Ольга Алагирова"
 				year="2025"
 			/>
-			<CaseListButtons previous={`${CASES_ROUTE}/${SBER_SELLER_ROUTE}`} next={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} />
+			<CaseListButtons previous={`${CASES_ROUTE}/${SBER_SELLER_ROUTE}`} next={`${CASES_ROUTE}/${TWELVE_STOREEZ_ROUTE}`} />
 		</CasePageTemplate>
 	)
 }

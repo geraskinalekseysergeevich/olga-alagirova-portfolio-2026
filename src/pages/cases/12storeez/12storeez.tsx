@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { CASES_ROUTE, SOFIA_SONECHKA_ROUTE, YANDEX_RENT_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, GKB_DAVYDOVSKY_ROUTE, YANDEX_RENT_ROUTE } from '../../../router/routes'
 import { TWELVE_STOREEZ_ANCHORS, TwelveStoreezAnchorId } from './anchors'
 
 export const TwelveStoreezPage = () => {
@@ -45,7 +45,7 @@ export const TwelveStoreezPage = () => {
 				year="2026"
 			/>
 			<CaseListButtons
-				previous={`${CASES_ROUTE}/${SOFIA_SONECHKA_ROUTE}`}
+				previous={`${CASES_ROUTE}/${GKB_DAVYDOVSKY_ROUTE}`}
 				next={`${CASES_ROUTE}/${YANDEX_RENT_ROUTE}`}
 			/>
 		</CasePageTemplate>

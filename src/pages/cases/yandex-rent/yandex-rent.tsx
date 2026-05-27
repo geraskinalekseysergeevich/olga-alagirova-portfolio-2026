@@ -4,7 +4,7 @@ import { CaseMediaSet } from '../../../components/case-blocks/case-media-set/med
 import { CasePageHeader } from '../../../components/case-blocks/case-page-header/page-header'
 import { CaseTextBlock } from '../../../components/case-blocks/case-text-block/text-block'
 import { CasePageTemplate } from '../../../components/case-page-template/case-page-template'
-import { APLASTIC_ROUTE, CASES_ROUTE, TWELVE_STOREEZ_ROUTE } from '../../../router/routes'
+import { CASES_ROUTE, TWELVE_STOREEZ_ROUTE, VK_LIGHTS_ROUTE } from '../../../router/routes'
 import { YANDEX_RENT_ANCHORS, YandexRentAnchorId } from './anchors'
 
 export const YandexRentPage = () => {
@@ -60,7 +60,7 @@ export const YandexRentPage = () => {
 				paragraph="Арт-директор / дизайнер — Ольга Алагирова"
 				year="2026"
 			/>
-			<CaseListButtons previous={`${CASES_ROUTE}/${TWELVE_STOREEZ_ROUTE}`} next={`${CASES_ROUTE}/${APLASTIC_ROUTE}`} />
+			<CaseListButtons previous={`${CASES_ROUTE}/${TWELVE_STOREEZ_ROUTE}`} next={`${CASES_ROUTE}/${VK_LIGHTS_ROUTE}`} />
 		</CasePageTemplate>
 	)
 }
