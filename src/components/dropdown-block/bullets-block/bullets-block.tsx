@@ -1,8 +1,9 @@
+import type { TextContent } from '../../../pages/cv/data-types'
 import { BodyText } from '../../texts/texts'
 import styles from './bullets-block.module.css'
 
 type BulletsBlockProps = {
-	bullets: string[]
+	bullets: TextContent[]
 }
 
 export const BulletsBlock = ({ bullets }: BulletsBlockProps) => {
